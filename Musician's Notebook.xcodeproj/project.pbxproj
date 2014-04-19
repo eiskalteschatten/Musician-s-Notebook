@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93FAA6A2190291E0009F7624 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FAA6A1190291E0009F7624 /* Cocoa.framework */; };
+		93FAA6AC190291E0009F7624 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93FAA6AA190291E0009F7624 /* InfoPlist.strings */; };
+		93FAA6AE190291E0009F7624 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FAA6AD190291E0009F7624 /* main.m */; };
+		93FAA6B2190291E0009F7624 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 93FAA6B0190291E0009F7624 /* Credits.rtf */; };
+		93FAA6B5190291E0009F7624 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FAA6B4190291E0009F7624 /* AppDelegate.m */; };
+		93FAA6B8190291E0009F7624 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93FAA6B6190291E0009F7624 /* MainMenu.xib */; };
+		93FAA6BB190291E0009F7624 /* Musician_s_Notebook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93FAA6B9190291E0009F7624 /* Musician_s_Notebook.xcdatamodeld */; };
+		93FAA6BD190291E0009F7624 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93FAA6BC190291E0009F7624 /* Images.xcassets */; };
+		93FAA6C4190291E0009F7624 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FAA6C3190291E0009F7624 /* XCTest.framework */; };
+		93FAA6C5190291E0009F7624 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FAA6A1190291E0009F7624 /* Cocoa.framework */; };
+		93FAA6CD190291E0009F7624 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93FAA6CB190291E0009F7624 /* InfoPlist.strings */; };
+		93FAA6CF190291E0009F7624 /* Musician_s_NotebookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FAA6CE190291E0009F7624 /* Musician_s_NotebookTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		93FAA6C6190291E0009F7624 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93FAA696190291E0009F7624 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93FAA69D190291E0009F7624;
+			remoteInfo = "Musician's Notebook";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		93FAA69E190291E0009F7624 /* Musician's Notebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Musician's Notebook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93FAA6A1190291E0009F7624 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		93FAA6A4190291E0009F7624 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		93FAA6A5190291E0009F7624 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		93FAA6A6190291E0009F7624 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		93FAA6A9190291E0009F7624 /* Musician's Notebook-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Musician's Notebook-Info.plist"; sourceTree = "<group>"; };
+		93FAA6AB190291E0009F7624 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		93FAA6AD190291E0009F7624 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		93FAA6AF190291E0009F7624 /* Musician's Notebook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Musician's Notebook-Prefix.pch"; sourceTree = "<group>"; };
+		93FAA6B1190291E0009F7624 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		93FAA6B3190291E0009F7624 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		93FAA6B4190291E0009F7624 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		93FAA6B7190291E0009F7624 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		93FAA6BA190291E0009F7624 /* Musician_s_Notebook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Musician_s_Notebook.xcdatamodel; sourceTree = "<group>"; };
+		93FAA6BC190291E0009F7624 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		93FAA6C2190291E0009F7624 /* Musician's NotebookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Musician's NotebookTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93FAA6C3190291E0009F7624 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		93FAA6CA190291E0009F7624 /* Musician's NotebookTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Musician's NotebookTests-Info.plist"; sourceTree = "<group>"; };
+		93FAA6CC190291E0009F7624 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		93FAA6CE190291E0009F7624 /* Musician_s_NotebookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Musician_s_NotebookTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93FAA69B190291E0009F7624 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93FAA6A2190291E0009F7624 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93FAA6BF190291E0009F7624 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93FAA6C5190291E0009F7624 /* Cocoa.framework in Frameworks */,
+				93FAA6C4190291E0009F7624 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93FAA695190291E0009F7624 = {
+			isa = PBXGroup;
+			children = (
+				93FAA6A7190291E0009F7624 /* Musician's Notebook */,
+				93FAA6C8190291E0009F7624 /* Musician's NotebookTests */,
+				93FAA6A0190291E0009F7624 /* Frameworks */,
+				93FAA69F190291E0009F7624 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93FAA69F190291E0009F7624 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93FAA69E190291E0009F7624 /* Musician's Notebook.app */,
+				93FAA6C2190291E0009F7624 /* Musician's NotebookTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93FAA6A0190291E0009F7624 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93FAA6A1190291E0009F7624 /* Cocoa.framework */,
+				93FAA6C3190291E0009F7624 /* XCTest.framework */,
+				93FAA6A3190291E0009F7624 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93FAA6A3190291E0009F7624 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93FAA6A4190291E0009F7624 /* AppKit.framework */,
+				93FAA6A5190291E0009F7624 /* CoreData.framework */,
+				93FAA6A6190291E0009F7624 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		93FAA6A7190291E0009F7624 /* Musician's Notebook */ = {
+			isa = PBXGroup;
+			children = (
+				93FAA6B3190291E0009F7624 /* AppDelegate.h */,
+				93FAA6B4190291E0009F7624 /* AppDelegate.m */,
+				93FAA6B6190291E0009F7624 /* MainMenu.xib */,
+				93FAA6BC190291E0009F7624 /* Images.xcassets */,
+				93FAA6B9190291E0009F7624 /* Musician_s_Notebook.xcdatamodeld */,
+				93FAA6A8190291E0009F7624 /* Supporting Files */,
+			);
+			path = "Musician's Notebook";
+			sourceTree = "<group>";
+		};
+		93FAA6A8190291E0009F7624 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93FAA6A9190291E0009F7624 /* Musician's Notebook-Info.plist */,
+				93FAA6AA190291E0009F7624 /* InfoPlist.strings */,
+				93FAA6AD190291E0009F7624 /* main.m */,
+				93FAA6AF190291E0009F7624 /* Musician's Notebook-Prefix.pch */,
+				93FAA6B0190291E0009F7624 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93FAA6C8190291E0009F7624 /* Musician's NotebookTests */ = {
+			isa = PBXGroup;
+			children = (
+				93FAA6CE190291E0009F7624 /* Musician_s_NotebookTests.m */,
+				93FAA6C9190291E0009F7624 /* Supporting Files */,
+			);
+			path = "Musician's NotebookTests";
+			sourceTree = "<group>";
+		};
+		93FAA6C9190291E0009F7624 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93FAA6CA190291E0009F7624 /* Musician's NotebookTests-Info.plist */,
+				93FAA6CB190291E0009F7624 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93FAA69D190291E0009F7624 /* Musician's Notebook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93FAA6D2190291E0009F7624 /* Build configuration list for PBXNativeTarget "Musician's Notebook" */;
+			buildPhases = (
+				93FAA69A190291E0009F7624 /* Sources */,
+				93FAA69B190291E0009F7624 /* Frameworks */,
+				93FAA69C190291E0009F7624 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Musician's Notebook";
+			productName = "Musician's Notebook";
+			productReference = 93FAA69E190291E0009F7624 /* Musician's Notebook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		93FAA6C1190291E0009F7624 /* Musician's NotebookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93FAA6D5190291E0009F7624 /* Build configuration list for PBXNativeTarget "Musician's NotebookTests" */;
+			buildPhases = (
+				93FAA6BE190291E0009F7624 /* Sources */,
+				93FAA6BF190291E0009F7624 /* Frameworks */,
+				93FAA6C0190291E0009F7624 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93FAA6C7190291E0009F7624 /* PBXTargetDependency */,
+			);
+			name = "Musician's NotebookTests";
+			productName = "Musician's NotebookTests";
+			productReference = 93FAA6C2190291E0009F7624 /* Musician's NotebookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93FAA696190291E0009F7624 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Alex Seifert";
+				TargetAttributes = {
+					93FAA6C1190291E0009F7624 = {
+						TestTargetID = 93FAA69D190291E0009F7624;
+					};
+				};
+			};
+			buildConfigurationList = 93FAA699190291E0009F7624 /* Build configuration list for PBXProject "Musician's Notebook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93FAA695190291E0009F7624;
+			productRefGroup = 93FAA69F190291E0009F7624 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93FAA69D190291E0009F7624 /* Musician's Notebook */,
+				93FAA6C1190291E0009F7624 /* Musician's NotebookTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93FAA69C190291E0009F7624 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93FAA6AC190291E0009F7624 /* InfoPlist.strings in Resources */,
+				93FAA6BD190291E0009F7624 /* Images.xcassets in Resources */,
+				93FAA6B2190291E0009F7624 /* Credits.rtf in Resources */,
+				93FAA6B8190291E0009F7624 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93FAA6C0190291E0009F7624 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93FAA6CD190291E0009F7624 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93FAA69A190291E0009F7624 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93FAA6BB190291E0009F7624 /* Musician_s_Notebook.xcdatamodeld in Sources */,
+				93FAA6B5190291E0009F7624 /* AppDelegate.m in Sources */,
+				93FAA6AE190291E0009F7624 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93FAA6BE190291E0009F7624 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93FAA6CF190291E0009F7624 /* Musician_s_NotebookTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93FAA6C7190291E0009F7624 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93FAA69D190291E0009F7624 /* Musician's Notebook */;
+			targetProxy = 93FAA6C6190291E0009F7624 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		93FAA6AA190291E0009F7624 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93FAA6AB190291E0009F7624 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		93FAA6B0190291E0009F7624 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93FAA6B1190291E0009F7624 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		93FAA6B6190291E0009F7624 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93FAA6B7190291E0009F7624 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		93FAA6CB190291E0009F7624 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93FAA6CC190291E0009F7624 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93FAA6D0190291E0009F7624 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		93FAA6D1190291E0009F7624 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		93FAA6D3190291E0009F7624 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Musician's Notebook/Musician's Notebook-Prefix.pch";
+				INFOPLIST_FILE = "Musician's Notebook/Musician's Notebook-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		93FAA6D4190291E0009F7624 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Musician's Notebook/Musician's Notebook-Prefix.pch";
+				INFOPLIST_FILE = "Musician's Notebook/Musician's Notebook-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		93FAA6D6190291E0009F7624 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Musician's Notebook.app/Contents/MacOS/Musician's Notebook";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Musician's Notebook/Musician's Notebook-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Musician's NotebookTests/Musician's NotebookTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		93FAA6D7190291E0009F7624 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Musician's Notebook.app/Contents/MacOS/Musician's Notebook";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Musician's Notebook/Musician's Notebook-Prefix.pch";
+				INFOPLIST_FILE = "Musician's NotebookTests/Musician's NotebookTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93FAA699190291E0009F7624 /* Build configuration list for PBXProject "Musician's Notebook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93FAA6D0190291E0009F7624 /* Debug */,
+				93FAA6D1190291E0009F7624 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93FAA6D2190291E0009F7624 /* Build configuration list for PBXNativeTarget "Musician's Notebook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93FAA6D3190291E0009F7624 /* Debug */,
+				93FAA6D4190291E0009F7624 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		93FAA6D5190291E0009F7624 /* Build configuration list for PBXNativeTarget "Musician's NotebookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93FAA6D6190291E0009F7624 /* Debug */,
+				93FAA6D7190291E0009F7624 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		93FAA6B9190291E0009F7624 /* Musician_s_Notebook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				93FAA6BA190291E0009F7624 /* Musician_s_Notebook.xcdatamodel */,
+			);
+			currentVersion = 93FAA6BA190291E0009F7624 /* Musician_s_Notebook.xcdatamodel */;
+			path = Musician_s_Notebook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 93FAA696190291E0009F7624 /* Project object */;
+}
