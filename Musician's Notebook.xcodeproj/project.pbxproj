@@ -393,6 +393,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Musician's Notebook/Musician's Notebook-Prefix.pch";
 				INFOPLIST_FILE = "Musician's Notebook/Musician's Notebook-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -406,6 +407,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Musician's Notebook/Musician's Notebook-Prefix.pch";
 				INFOPLIST_FILE = "Musician's Notebook/Musician's Notebook-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -470,6 +472,7 @@
 				93FAA6D4190291E0009F7624 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93FAA6D5190291E0009F7624 /* Build configuration list for PBXNativeTarget "Musician's NotebookTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +481,7 @@
 				93FAA6D7190291E0009F7624 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
