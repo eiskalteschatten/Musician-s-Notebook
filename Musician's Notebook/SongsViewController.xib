@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SongsViewController">
             <connections>
+                <outlet property="splitView" destination="oN0-MT-z3l" id="ZFI-d3-Azd"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>

@@ -22,4 +22,8 @@
     return self;
 }
 
+- (void)awakeFromNib {
+    [_splitView setHoldingPriority:NSLayoutPriorityDragThatCanResizeWindow forSubviewAtIndex:0];
+}
+
 @end

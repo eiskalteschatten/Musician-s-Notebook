@@ -15,6 +15,7 @@
 @property (assign) IBOutlet NSView *mainView;
 @property (strong) NSViewController *currentViewController;
 @property (strong) IBOutlet SongsViewController *songsViewController;
+@property (strong) IBOutlet NSSplitView *splitView;
 
 - (void)setMainViewTo:(NSViewController *)controller;
 - (void)showSongsView;

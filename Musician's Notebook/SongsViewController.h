@@ -10,4 +10,6 @@
 
 @interface SongsViewController : NSViewController
 
+@property (strong) IBOutlet NSSplitView *splitView;
+
 @end

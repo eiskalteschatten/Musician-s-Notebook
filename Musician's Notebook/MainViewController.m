@@ -24,6 +24,7 @@
 
 - (void)awakeFromNib {
     [self showSongsView];
+    [_splitView setHoldingPriority:NSLayoutPriorityDragThatCanResizeWindow forSubviewAtIndex:0];
 }
 
 - (void)setMainViewTo:(NSViewController *)controller {
