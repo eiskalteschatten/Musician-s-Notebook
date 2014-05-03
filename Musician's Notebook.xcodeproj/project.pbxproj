@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93ABC59519155E99004AF635 /* SongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC59319155E99004AF635 /* SongsViewController.m */; };
+		93ABC59619155E99004AF635 /* SongsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC59419155E99004AF635 /* SongsViewController.xib */; };
+		93ABC59A19155FFA004AF635 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC59919155FFA004AF635 /* MainViewController.m */; };
 		93FAA6A2190291E0009F7624 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FAA6A1190291E0009F7624 /* Cocoa.framework */; };
 		93FAA6AC190291E0009F7624 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93FAA6AA190291E0009F7624 /* InfoPlist.strings */; };
 		93FAA6AE190291E0009F7624 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FAA6AD190291E0009F7624 /* main.m */; };
@@ -32,6 +35,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		93ABC59119155DF3004AF635 /* Musician's Notebook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Musician's Notebook.entitlements"; sourceTree = "<group>"; };
+		93ABC59219155E99004AF635 /* SongsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongsViewController.h; sourceTree = "<group>"; };
+		93ABC59319155E99004AF635 /* SongsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongsViewController.m; sourceTree = "<group>"; };
+		93ABC59419155E99004AF635 /* SongsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongsViewController.xib; sourceTree = "<group>"; };
+		93ABC59819155FFA004AF635 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		93ABC59919155FFA004AF635 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		93FAA69E190291E0009F7624 /* Musician's Notebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Musician's Notebook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FAA6A1190291E0009F7624 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		93FAA6A4190291E0009F7624 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -75,6 +84,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93ABC59719155EA2004AF635 /* SongsView */ = {
+			isa = PBXGroup;
+			children = (
+				93ABC59219155E99004AF635 /* SongsViewController.h */,
+				93ABC59319155E99004AF635 /* SongsViewController.m */,
+				93ABC59419155E99004AF635 /* SongsViewController.xib */,
+			);
+			name = SongsView;
+			sourceTree = "<group>";
+		};
 		93FAA695190291E0009F7624 = {
 			isa = PBXGroup;
 			children = (
@@ -117,9 +136,13 @@
 		93FAA6A7190291E0009F7624 /* Musician's Notebook */ = {
 			isa = PBXGroup;
 			children = (
+				93ABC59119155DF3004AF635 /* Musician's Notebook.entitlements */,
 				93FAA6B3190291E0009F7624 /* AppDelegate.h */,
 				93FAA6B4190291E0009F7624 /* AppDelegate.m */,
 				93FAA6B6190291E0009F7624 /* MainMenu.xib */,
+				93ABC59819155FFA004AF635 /* MainViewController.h */,
+				93ABC59919155FFA004AF635 /* MainViewController.m */,
+				93ABC59719155EA2004AF635 /* SongsView */,
 				93FAA6BC190291E0009F7624 /* Images.xcassets */,
 				93FAA6B9190291E0009F7624 /* Musician_s_Notebook.xcdatamodeld */,
 				93FAA6A8190291E0009F7624 /* Supporting Files */,
@@ -204,6 +227,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Alex Seifert";
 				TargetAttributes = {
+					93FAA69D190291E0009F7624 = {
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
 					93FAA6C1190291E0009F7624 = {
 						TestTargetID = 93FAA69D190291E0009F7624;
 					};
@@ -236,6 +266,7 @@
 				93FAA6AC190291E0009F7624 /* InfoPlist.strings in Resources */,
 				93FAA6BD190291E0009F7624 /* Images.xcassets in Resources */,
 				93FAA6B2190291E0009F7624 /* Credits.rtf in Resources */,
+				93ABC59619155E99004AF635 /* SongsViewController.xib in Resources */,
 				93FAA6B8190291E0009F7624 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,7 +287,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				93FAA6BB190291E0009F7624 /* Musician_s_Notebook.xcdatamodeld in Sources */,
+				93ABC59519155E99004AF635 /* SongsViewController.m in Sources */,
 				93FAA6B5190291E0009F7624 /* AppDelegate.m in Sources */,
+				93ABC59A19155FFA004AF635 /* MainViewController.m in Sources */,
 				93FAA6AE190291E0009F7624 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,12 +422,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Musician's Notebook/Musician's Notebook.entitlements";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Musician's Notebook/Musician's Notebook-Prefix.pch";
 				INFOPLIST_FILE = "Musician's Notebook/Musician's Notebook-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.8;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -403,12 +438,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Musician's Notebook/Musician's Notebook.entitlements";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Musician's Notebook/Musician's Notebook-Prefix.pch";
 				INFOPLIST_FILE = "Musician's Notebook/Musician's Notebook-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.8;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
