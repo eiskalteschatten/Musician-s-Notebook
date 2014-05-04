@@ -681,7 +681,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
                             <customView id="lUq-U4-iHT">
-                                <rect key="frame" x="0.0" y="0.0" width="228.5" height="486"/>
+                                <rect key="frame" x="0.0" y="0.0" width="229" height="486"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
                                     <scrollView misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIs-FY-DMH">
@@ -754,6 +754,9 @@
                                                                     </connections>
                                                                 </tableCellView>
                                                             </prototypeCellViews>
+                                                            <connections>
+                                                                <binding destination="efA-Ic-zdQ" name="editable" keyPath="arrangedObjects.name" id="R3x-y5-zPP"/>
+                                                            </connections>
                                                         </tableColumn>
                                                     </tableColumns>
                                                 </outlineView>
@@ -778,7 +781,7 @@
                                 </constraints>
                             </customView>
                             <customView fixedFrame="YES" id="PBj-3m-fQI">
-                                <rect key="frame" x="229.5" y="0.0" width="499.5" height="486"/>
+                                <rect key="frame" x="230" y="0.0" width="499" height="486"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </customView>
                         </subviews>
@@ -820,6 +823,14 @@
             </connections>
         </viewController>
         <viewController id="CaB-8e-SQj" customClass="SongsViewController"/>
+        <treeController childrenKeyPath="children" id="efA-Ic-zdQ" customClass="FolderTreeController">
+            <connections>
+                <outlet property="content" destination="ItE-AN-ya5" id="816-pm-9Rj"/>
+                <outlet property="folderView" destination="ItE-AN-ya5" id="HaN-qe-23t"/>
+                <outlet property="mainViewContoller" destination="FDn-K1-gTI" id="41T-Ix-b7D"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="pQg-8b-bsc"/>
+            </connections>
+        </treeController>
     </objects>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>

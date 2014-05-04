@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93175E6B19165C8000E50920 /* FolderTreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93175E6A19165C8000E50920 /* FolderTreeController.m */; };
 		93ABC59519155E99004AF635 /* SongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC59319155E99004AF635 /* SongsViewController.m */; };
 		93ABC59619155E99004AF635 /* SongsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC59419155E99004AF635 /* SongsViewController.xib */; };
 		93ABC59A19155FFA004AF635 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC59919155FFA004AF635 /* MainViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		93175E6919165C8000E50920 /* FolderTreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderTreeController.h; sourceTree = "<group>"; };
+		93175E6A19165C8000E50920 /* FolderTreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderTreeController.m; sourceTree = "<group>"; };
 		93ABC59119155DF3004AF635 /* Musician's Notebook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Musician's Notebook.entitlements"; sourceTree = "<group>"; };
 		93ABC59219155E99004AF635 /* SongsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongsViewController.h; sourceTree = "<group>"; };
 		93ABC59319155E99004AF635 /* SongsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongsViewController.m; sourceTree = "<group>"; };
@@ -84,6 +87,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93175E65191651BD00E50920 /* Main Window */ = {
+			isa = PBXGroup;
+			children = (
+				93FAA6B6190291E0009F7624 /* MainMenu.xib */,
+				93ABC59819155FFA004AF635 /* MainViewController.h */,
+				93ABC59919155FFA004AF635 /* MainViewController.m */,
+				93175E6919165C8000E50920 /* FolderTreeController.h */,
+				93175E6A19165C8000E50920 /* FolderTreeController.m */,
+			);
+			name = "Main Window";
+			sourceTree = "<group>";
+		};
 		93ABC59719155EA2004AF635 /* SongsView */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,9 +154,7 @@
 				93ABC59119155DF3004AF635 /* Musician's Notebook.entitlements */,
 				93FAA6B3190291E0009F7624 /* AppDelegate.h */,
 				93FAA6B4190291E0009F7624 /* AppDelegate.m */,
-				93FAA6B6190291E0009F7624 /* MainMenu.xib */,
-				93ABC59819155FFA004AF635 /* MainViewController.h */,
-				93ABC59919155FFA004AF635 /* MainViewController.m */,
+				93175E65191651BD00E50920 /* Main Window */,
 				93ABC59719155EA2004AF635 /* SongsView */,
 				93FAA6BC190291E0009F7624 /* Images.xcassets */,
 				93FAA6B9190291E0009F7624 /* Musician_s_Notebook.xcdatamodeld */,
@@ -286,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93175E6B19165C8000E50920 /* FolderTreeController.m in Sources */,
 				93FAA6BB190291E0009F7624 /* Musician_s_Notebook.xcdatamodeld in Sources */,
 				93ABC59519155E99004AF635 /* SongsViewController.m in Sources */,
 				93FAA6B5190291E0009F7624 /* AppDelegate.m in Sources */,
