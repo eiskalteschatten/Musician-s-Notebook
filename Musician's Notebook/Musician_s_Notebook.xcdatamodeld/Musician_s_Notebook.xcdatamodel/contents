@@ -6,7 +6,8 @@
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Songs" syncable="YES">
+    <entity name="Song" syncable="YES">
+        <attribute name="artwork" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="audioFile" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="chords" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
@@ -19,6 +20,6 @@
     </entity>
     <elements>
         <element name="Notebooks" positionX="-200" positionY="50" width="128" height="103"/>
-        <element name="Songs" positionX="-45" positionY="18" width="128" height="178"/>
+        <element name="Song" positionX="-45" positionY="18" width="128" height="195"/>
     </elements>
 </model>

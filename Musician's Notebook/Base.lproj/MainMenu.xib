@@ -68,9 +68,9 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="File" id="bib-Uj-vzu">
                         <items>
-                            <menuItem title="New" keyEquivalent="n" id="Was-JA-tGl">
+                            <menuItem title="New Song" keyEquivalent="n" id="Was-JA-tGl">
                                 <connections>
-                                    <action selector="newDocument:" target="-1" id="4Si-XN-c54"/>
+                                    <action selector="add:" target="2aj-m3-G7l" id="vH0-4e-tnB"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
@@ -831,6 +831,11 @@
                 <outlet property="window" destination="QvC-M9-y7g" id="pQg-8b-bsc"/>
             </connections>
         </treeController>
+        <arrayController mode="entity" entityName="Song" id="2aj-m3-G7l" userLabel="Songs">
+            <connections>
+                <binding destination="Voe-Tx-rLC" name="managedObjectContext" keyPath="managedObjectContext" id="WSA-Ch-WoS"/>
+            </connections>
+        </arrayController>
     </objects>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
