@@ -33,7 +33,7 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" viewBased="YES" id="kuq-qn-dYO">
-                                                <rect key="frame" x="0.0" y="0.0" width="230" height="494"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="275" height="576"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <size key="intercellSpacing" width="3" height="2"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -158,9 +158,36 @@
                                 <constraint firstItem="qrQ-YD-65q" firstAttribute="leading" secondItem="4Kv-Tq-zYV" secondAttribute="leading" id="wAg-lp-eLi"/>
                             </constraints>
                         </customView>
-                        <customView fixedFrame="YES" id="Ejp-KN-iCJ">
+                        <customView id="Ejp-KN-iCJ">
                             <rect key="frame" x="276" y="0.0" width="433" height="599"/>
                             <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <tabView translatesAutoresizingMaskIntoConstraints="NO" id="UNA-n0-3OT">
+                                    <rect key="frame" x="-7" y="-10" width="447" height="595"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <tabViewItems>
+                                        <tabViewItem label="Tab" identifier="1" id="m42-Kz-uve">
+                                            <view key="view" id="Qd7-8f-qFa">
+                                                <rect key="frame" x="10" y="33" width="427" height="549"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                        </tabViewItem>
+                                        <tabViewItem label="View" identifier="2" id="v6q-BU-Q0S">
+                                            <view key="view" id="gom-mA-kcW">
+                                                <rect key="frame" x="10" y="33" width="157" height="78"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </view>
+                                        </tabViewItem>
+                                    </tabViewItems>
+                                </tabView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="UNA-n0-3OT" secondAttribute="trailing" id="gyh-gi-7RK"/>
+                                <constraint firstAttribute="bottom" secondItem="UNA-n0-3OT" secondAttribute="bottom" id="h1f-pU-o15"/>
+                                <constraint firstItem="UNA-n0-3OT" firstAttribute="top" secondItem="Ejp-KN-iCJ" secondAttribute="top" constant="20" id="tMl-U5-F0l"/>
+                                <constraint firstItem="UNA-n0-3OT" firstAttribute="leading" secondItem="Ejp-KN-iCJ" secondAttribute="leading" id="znF-Eh-epl"/>
+                            </constraints>
                         </customView>
                     </subviews>
                     <holdingPriorities>
