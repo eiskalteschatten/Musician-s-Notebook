@@ -831,7 +831,7 @@
                 <outlet property="window" destination="QvC-M9-y7g" id="pQg-8b-bsc"/>
             </connections>
         </treeController>
-        <arrayController mode="entity" entityName="Song" id="2aj-m3-G7l" userLabel="Songs">
+        <arrayController mode="entity" entityName="Song" id="2aj-m3-G7l" userLabel="Songs" customClass="SongArrayController">
             <connections>
                 <binding destination="Voe-Tx-rLC" name="managedObjectContext" keyPath="managedObjectContext" id="WSA-Ch-WoS"/>
             </connections>

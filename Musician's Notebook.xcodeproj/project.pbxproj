@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		93175E6B19165C8000E50920 /* FolderTreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93175E6A19165C8000E50920 /* FolderTreeController.m */; };
+		9384EE8A191956610065B2EA /* SongArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9384EE89191956610065B2EA /* SongArrayController.m */; };
 		93ABC59519155E99004AF635 /* SongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC59319155E99004AF635 /* SongsViewController.m */; };
 		93ABC59619155E99004AF635 /* SongsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC59419155E99004AF635 /* SongsViewController.xib */; };
 		93ABC59A19155FFA004AF635 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC59919155FFA004AF635 /* MainViewController.m */; };
@@ -38,6 +39,8 @@
 /* Begin PBXFileReference section */
 		93175E6919165C8000E50920 /* FolderTreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FolderTreeController.h; sourceTree = "<group>"; };
 		93175E6A19165C8000E50920 /* FolderTreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FolderTreeController.m; sourceTree = "<group>"; };
+		9384EE88191956610065B2EA /* SongArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongArrayController.h; sourceTree = "<group>"; };
+		9384EE89191956610065B2EA /* SongArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongArrayController.m; sourceTree = "<group>"; };
 		93ABC59119155DF3004AF635 /* Musician's Notebook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Musician's Notebook.entitlements"; sourceTree = "<group>"; };
 		93ABC59219155E99004AF635 /* SongsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongsViewController.h; sourceTree = "<group>"; };
 		93ABC59319155E99004AF635 /* SongsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongsViewController.m; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 				93ABC59219155E99004AF635 /* SongsViewController.h */,
 				93ABC59319155E99004AF635 /* SongsViewController.m */,
 				93ABC59419155E99004AF635 /* SongsViewController.xib */,
+				9384EE88191956610065B2EA /* SongArrayController.h */,
+				9384EE89191956610065B2EA /* SongArrayController.m */,
 			);
 			name = SongsView;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93175E6B19165C8000E50920 /* FolderTreeController.m in Sources */,
+				9384EE8A191956610065B2EA /* SongArrayController.m in Sources */,
 				93FAA6BB190291E0009F7624 /* Musician_s_Notebook.xcdatamodeld in Sources */,
 				93ABC59519155E99004AF635 /* SongsViewController.m in Sources */,
 				93FAA6B5190291E0009F7624 /* AppDelegate.m in Sources */,
