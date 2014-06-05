@@ -11,5 +11,10 @@
 @interface SongsViewController : NSViewController
 
 @property (strong) IBOutlet NSSplitView *splitView;
+@property (assign) IBOutlet NSTabView *tabView;
+
+@property (assign) NSInteger clickedSegment;
+
+- (IBAction)switchTab:(id)sender;
 
 @end

@@ -26,6 +26,12 @@
     [_splitView setHoldingPriority:NSLayoutPriorityDragThatCanResizeWindow forSubviewAtIndex:0];
 }
 
+- (IBAction)switchTab:(id)sender {
+    _clickedSegment = [sender selectedSegment];
+    
+    [_tabView selectTabViewItemAtIndex:_clickedSegment];
+}
+
 #pragma mark -
 #pragma mark Table View Delagte methods
 

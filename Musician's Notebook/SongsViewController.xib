@@ -8,6 +8,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="SongsViewController">
             <connections>
                 <outlet property="splitView" destination="oN0-MT-z3l" id="ZFI-d3-Azd"/>
+                <outlet property="tabView" destination="UNA-n0-3OT" id="m0a-KX-1jh"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -175,18 +176,18 @@
                             <rect key="frame" x="300" y="0.0" width="470" height="599"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <tabView ambiguous="YES" misplaced="YES" type="noTabsNoBorder" initialItem="m42-Kz-uve" translatesAutoresizingMaskIntoConstraints="NO" id="UNA-n0-3OT">
-                                    <rect key="frame" x="-1" y="0.0" width="471" height="499"/>
+                                <tabView misplaced="YES" type="noTabsNoBorder" initialItem="m42-Kz-uve" translatesAutoresizingMaskIntoConstraints="NO" id="UNA-n0-3OT">
+                                    <rect key="frame" x="-1" y="0.0" width="471" height="549"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <tabViewItems>
-                                        <tabViewItem label="Song Information" identifier="1" id="m42-Kz-uve">
+                                        <tabViewItem label="Song" identifier="1" id="m42-Kz-uve">
                                             <view key="view" id="Qd7-8f-qFa">
-                                                <rect key="frame" x="0.0" y="0.0" width="471" height="499"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="470" height="549"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uDR-Ba-saa">
-                                                        <rect key="frame" x="15" y="479" width="76" height="17"/>
+                                                        <rect key="frame" x="15" y="529" width="76" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Song Name" id="Y5i-WW-6uf">
                                                             <font key="font" metaFont="system"/>
@@ -195,7 +196,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qRj-N7-LaC">
-                                                        <rect key="frame" x="17" y="449" width="431" height="22"/>
+                                                        <rect key="frame" x="17" y="499" width="431" height="22"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="HFa-RN-JTw">
                                                             <font key="font" metaFont="system"/>
@@ -204,7 +205,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="baC-CK-h6a">
-                                                        <rect key="frame" x="15" y="424" width="38" height="17"/>
+                                                        <rect key="frame" x="15" y="474" width="38" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Artist" id="I5I-ca-El5">
                                                             <font key="font" metaFont="system"/>
@@ -213,7 +214,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6j-p2-wDw">
-                                                        <rect key="frame" x="17" y="394" width="431" height="22"/>
+                                                        <rect key="frame" x="17" y="444" width="431" height="22"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="vmG-Bj-TnK">
                                                             <font key="font" metaFont="system"/>
@@ -222,7 +223,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ud-fU-V6A">
-                                                        <rect key="frame" x="15" y="369" width="46" height="17"/>
+                                                        <rect key="frame" x="15" y="419" width="46" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Album" id="b0J-r1-4MI">
                                                             <font key="font" metaFont="system"/>
@@ -231,7 +232,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ld1-xN-fgW">
-                                                        <rect key="frame" x="17" y="339" width="431" height="22"/>
+                                                        <rect key="frame" x="17" y="389" width="431" height="22"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="jtc-9X-Yxf">
                                                             <font key="font" metaFont="system"/>
@@ -240,7 +241,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eLd-qy-iFR">
-                                                        <rect key="frame" x="15" y="314" width="54" height="17"/>
+                                                        <rect key="frame" x="15" y="364" width="54" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Artwork" id="Jbg-w2-cUM">
                                                             <font key="font" metaFont="system"/>
@@ -249,7 +250,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xWg-d0-ug6">
-                                                        <rect key="frame" x="18" y="112" width="226" height="197"/>
+                                                        <rect key="frame" x="18" y="162" width="226" height="197"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="lVi-NW-q7I"/>
                                                     </imageView>
@@ -266,24 +267,24 @@
                                         </tabViewItem>
                                         <tabViewItem label="Lyrics" identifier="" id="GAU-4B-CJn">
                                             <view key="view" id="v0d-3f-hqe">
-                                                <rect key="frame" x="0.0" y="0.0" width="471" height="499"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="471" height="549"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <scrollView misplaced="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxF-Ax-ZwK">
+                                                    <scrollView misplaced="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxF-Ax-ZwK">
                                                         <rect key="frame" x="-3" y="250" width="359" height="296"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <clipView key="contentView" misplaced="YES" id="Zx6-hd-DWn">
-                                                            <rect key="frame" x="1" y="1" width="357" height="294"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="359" height="296"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="08S-J6-tPn">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="357" height="294"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="296"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <size key="minSize" width="357" height="294"/>
+                                                                    <size key="minSize" width="359" height="296"/>
                                                                     <size key="maxSize" width="463" height="10000000"/>
                                                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <size key="minSize" width="357" height="294"/>
+                                                                    <size key="minSize" width="359" height="296"/>
                                                                     <size key="maxSize" width="463" height="10000000"/>
                                                                 </textView>
                                                             </subviews>
@@ -294,7 +295,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="SnX-hi-nTu">
-                                                            <rect key="frame" x="342" y="1" width="16" height="294"/>
+                                                            <rect key="frame" x="343" y="0.0" width="16" height="296"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                     </scrollView>
@@ -309,11 +310,11 @@
                                         </tabViewItem>
                                         <tabViewItem label="Audio" identifier="" id="Kt4-Ke-Gih">
                                             <view key="view" id="XFR-Lx-6a5">
-                                                <rect key="frame" x="0.0" y="0.0" width="471" height="499"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="471" height="549"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bW5-Cr-wqB">
-                                                        <rect key="frame" x="292" y="18" width="87" height="25"/>
+                                                        <rect key="frame" x="292" y="68" width="87" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Remove" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ns2-Fo-aXF">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -321,7 +322,7 @@
                                                         </buttonCell>
                                                     </button>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Otl-gj-bs2">
-                                                        <rect key="frame" x="387" y="18" width="64" height="25"/>
+                                                        <rect key="frame" x="387" y="68" width="64" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Add" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WZ3-ic-OaC">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -333,24 +334,24 @@
                                         </tabViewItem>
                                         <tabViewItem label="Tabs" identifier="2" id="v6q-BU-Q0S">
                                             <view key="view" id="gom-mA-kcW">
-                                                <rect key="frame" x="0.0" y="0.0" width="471" height="499"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="471" height="549"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <scrollView misplaced="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaH-Pv-Ieh">
-                                                        <rect key="frame" x="17" y="398" width="240" height="135"/>
+                                                    <scrollView misplaced="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaH-Pv-Ieh">
+                                                        <rect key="frame" x="42" y="286" width="240" height="135"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <clipView key="contentView" misplaced="YES" id="qac-Rl-Q2O">
-                                                            <rect key="frame" x="1" y="1" width="238" height="133"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textView importsGraphics="NO" richText="NO" findStyle="panel" allowsUndo="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" id="jFj-0m-Ilp">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="238" height="133"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <size key="minSize" width="238" height="133"/>
+                                                                    <size key="minSize" width="240" height="135"/>
                                                                     <size key="maxSize" width="463" height="10000000"/>
                                                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <size key="minSize" width="238" height="133"/>
+                                                                    <size key="minSize" width="240" height="135"/>
                                                                     <size key="maxSize" width="463" height="10000000"/>
                                                                 </textView>
                                                             </subviews>
@@ -361,7 +362,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="RYs-zJ-Xq9">
-                                                            <rect key="frame" x="223" y="1" width="16" height="133"/>
+                                                            <rect key="frame" x="455" y="0.0" width="16" height="549"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                     </scrollView>
@@ -376,30 +377,30 @@
                                         </tabViewItem>
                                         <tabViewItem label="Chords" identifier="" id="QhC-El-s68">
                                             <view key="view" id="qPs-bs-dZA">
-                                                <rect key="frame" x="0.0" y="0.0" width="471" height="499"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="471" height="549"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                         </tabViewItem>
                                         <tabViewItem label="Notes" identifier="" id="u6O-Gl-HGL">
-                                            <view key="view" ambiguous="YES" id="XG5-dS-pTk">
-                                                <rect key="frame" x="0.0" y="0.0" width="471" height="499"/>
+                                            <view key="view" id="XG5-dS-pTk">
+                                                <rect key="frame" x="0.0" y="0.0" width="471" height="549"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <scrollView ambiguous="YES" misplaced="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC7-b2-0Zj">
+                                                    <scrollView misplaced="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC7-b2-0Zj">
                                                         <rect key="frame" x="63" y="357" width="240" height="135"/>
                                                         <autoresizingMask key="autoresizingMask"/>
-                                                        <clipView key="contentView" ambiguous="YES" misplaced="YES" id="tv1-bA-Cyq">
-                                                            <rect key="frame" x="1" y="1" width="238" height="133"/>
+                                                        <clipView key="contentView" misplaced="YES" id="tv1-bA-Cyq">
+                                                            <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textView ambiguous="YES" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="SWx-tT-h3a">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="238" height="133"/>
+                                                                <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="SWx-tT-h3a">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <size key="minSize" width="238" height="133"/>
+                                                                    <size key="minSize" width="240" height="135"/>
                                                                     <size key="maxSize" width="463" height="10000000"/>
                                                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <size key="minSize" width="238" height="133"/>
+                                                                    <size key="minSize" width="240" height="135"/>
                                                                     <size key="maxSize" width="463" height="10000000"/>
                                                                 </textView>
                                                             </subviews>
@@ -410,7 +411,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="CVl-WS-xrW">
-                                                            <rect key="frame" x="223" y="1" width="16" height="133"/>
+                                                            <rect key="frame" x="224" y="0.0" width="16" height="135"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                     </scrollView>
@@ -425,8 +426,8 @@
                                         </tabViewItem>
                                     </tabViewItems>
                                 </tabView>
-                                <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="d4v-eC-bU3">
-                                    <rect key="frame" x="62" y="555" width="346" height="25"/>
+                                <segmentedControl verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4v-eC-bU3">
+                                    <rect key="frame" x="62" y="561" width="346" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <segmentedCell key="cell" alignment="left" style="texturedRounded" trackingMode="selectOne" id="yCd-Jg-c7o">
                                         <font key="font" metaFont="system"/>
@@ -439,11 +440,15 @@
                                             <segment label="Notes"/>
                                         </segments>
                                     </segmentedCell>
+                                    <connections>
+                                        <action selector="switchTab:" target="-2" id="Uym-sm-0So"/>
+                                    </connections>
                                 </segmentedControl>
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="centerX" secondItem="d4v-eC-bU3" secondAttribute="centerX" id="2mB-LU-oXE"/>
                                 <constraint firstItem="d4v-eC-bU3" firstAttribute="top" secondItem="Ejp-KN-iCJ" secondAttribute="top" constant="20" id="Kxh-Dt-RE0"/>
+                                <constraint firstItem="UNA-n0-3OT" firstAttribute="top" secondItem="d4v-eC-bU3" secondAttribute="bottom" constant="8" id="cv1-g6-gJy"/>
                                 <constraint firstAttribute="trailing" secondItem="UNA-n0-3OT" secondAttribute="trailing" id="gyh-gi-7RK"/>
                                 <constraint firstAttribute="bottom" secondItem="UNA-n0-3OT" secondAttribute="bottom" id="h1f-pU-o15"/>
                                 <constraint firstItem="UNA-n0-3OT" firstAttribute="leading" secondItem="Ejp-KN-iCJ" secondAttribute="leading" id="znF-Eh-epl"/>
