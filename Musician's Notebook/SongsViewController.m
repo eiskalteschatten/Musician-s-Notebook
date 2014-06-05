@@ -26,4 +26,45 @@
     [_splitView setHoldingPriority:NSLayoutPriorityDragThatCanResizeWindow forSubviewAtIndex:0];
 }
 
+#pragma mark -
+#pragma mark Table View Delagte methods
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    //return [_noteController getNumberOfNotes];
+    return 0;
+}
+
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    NSString *identifier = [tableColumn identifier];
+    
+    if ([identifier isEqualToString:@"MainCell"]) {
+        NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"MainCell" owner:self];
+        
+        
+//        [cellView.imageView setImage:img];
+//        [cellView.textField setStringValue:indexTitles[row]];
+//        [cellView.subviews[2] setStringValue:[_helper formatDate:indexDates[row]]];
+
+        
+       // NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:currentNote];
+       // [tableView selectRowIndexes:indexSet byExtendingSelection:NO];
+        
+        return cellView;
+    }
+    
+    return nil;
+}
+
+- (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
+//    _selectedNote = [pageList selectedRow];
+//    
+//    if (_selectedNote != -1) {
+//        [_textViewController loadNote:_selectedNote];
+//    }
+//    else {
+//        // No row was selected
+//    }
+}
+
+
 @end
