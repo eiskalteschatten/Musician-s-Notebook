@@ -70,7 +70,7 @@
                         <items>
                             <menuItem title="New Song" keyEquivalent="n" id="Was-JA-tGl">
                                 <connections>
-                                    <action selector="add:" target="2aj-m3-G7l" id="vH0-4e-tnB"/>
+                                    <action selector="addSong:" target="CaB-8e-SQj" id="fBS-01-tAu"/>
                                 </connections>
                             </menuItem>
                             <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
@@ -833,7 +833,7 @@
                             </buttonCell>
                         </button>
                         <connections>
-                            <action selector="add:" target="2aj-m3-G7l" id="wa9-qf-iZd"/>
+                            <action selector="addSong:" target="CaB-8e-SQj" id="icI-YL-Xaa"/>
                         </connections>
                     </toolbarItem>
                 </allowedToolbarItems>
@@ -864,11 +864,6 @@
                 <outlet property="window" destination="QvC-M9-y7g" id="pQg-8b-bsc"/>
             </connections>
         </treeController>
-        <arrayController mode="entity" entityName="Song" id="2aj-m3-G7l" userLabel="Songs" customClass="SongArrayController">
-            <connections>
-                <binding destination="Voe-Tx-rLC" name="managedObjectContext" keyPath="managedObjectContext" id="WSA-Ch-WoS"/>
-            </connections>
-        </arrayController>
     </objects>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>

@@ -7,14 +7,18 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "SongArrayController.h"
 
 @interface SongsViewController : NSViewController
 
 @property (strong) IBOutlet NSSplitView *splitView;
 @property (assign) IBOutlet NSTabView *tabView;
+@property (assign) IBOutlet NSTableView *songView;
+@property (assign) IBOutlet SongArrayController *songArray;
 
 @property (assign) NSInteger clickedSegment;
 
 - (IBAction)switchTab:(id)sender;
+- (IBAction)addSong:(id)sender;
 
 @end

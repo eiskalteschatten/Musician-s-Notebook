@@ -10,6 +10,6 @@
 
 @interface SongArrayController : NSArrayController
 
-@property (assign) IBOutlet NSTableView *tableView;
+@property (assign) IBOutlet NSTableView *songView;
 
 @end

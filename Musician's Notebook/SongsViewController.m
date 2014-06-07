@@ -33,6 +33,15 @@
 }
 
 #pragma mark -
+#pragma mark Song methods
+
+- (IBAction)addSong:(id)sender {
+    [_songArray add:self];
+    
+    
+}
+
+#pragma mark -
 #pragma mark Table View Delagte methods
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
@@ -71,6 +80,5 @@
 //        // No row was selected
 //    }
 }
-
 
 @end

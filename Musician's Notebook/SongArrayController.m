@@ -14,8 +14,6 @@
     id newObj = [super newObject];
 //    [newObj setValue:@"test" forKey:@"name"];
     
-    
-    
     return newObj;
 }
 
