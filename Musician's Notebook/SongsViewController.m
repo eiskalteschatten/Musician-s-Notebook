@@ -55,14 +55,13 @@
     if ([identifier isEqualToString:@"MainCell"]) {
         NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"MainCell" owner:self];
         
-        
-//        [cellView.imageView setImage:img];
-//        [cellView.textField setStringValue:indexTitles[row]];
-//        [cellView.subviews[2] setStringValue:[_helper formatDate:indexDates[row]]];
+        [cellView.imageView setImage:[NSImage imageNamed:@"Music Note"]];
+        //[cellView.subviews[1] setStringValue:@"New Song"];
+        //[cellView.subviews[2] setStringValue:@"test"];
 
         
-       // NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:currentNote];
-       // [tableView selectRowIndexes:indexSet byExtendingSelection:NO];
+       //NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:currentNote];
+       //[tableView selectRowIndexes:indexSet byExtendingSelection:NO];
         
         return cellView;
     }
