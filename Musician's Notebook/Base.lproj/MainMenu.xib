@@ -18,6 +18,7 @@
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="xu3-lj-8gC" customClass="NotebookController"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="Musician's Notebook" id="1Xt-HY-uBw">
@@ -756,12 +757,12 @@
                                                                 </tableCellView>
                                                             </prototypeCellViews>
                                                             <connections>
-                                                                <binding destination="efA-Ic-zdQ" name="editable" keyPath="arrangedObjects.name" id="R3x-y5-zPP"/>
+                                                                <binding destination="9jA-As-nyu" name="value" keyPath="arrangedObjects" id="H9A-2n-sep"/>
                                                             </connections>
                                                         </tableColumn>
                                                     </tableColumns>
                                                     <connections>
-                                                        <outlet property="delegate" destination="PBI-im-uBE" id="PXE-nV-XFg"/>
+                                                        <outlet property="delegate" destination="xu3-lj-8gC" id="q9h-mw-jlB"/>
                                                     </connections>
                                                 </outlineView>
                                             </subviews>
@@ -790,6 +791,9 @@
                                                         <behavior key="behavior" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="add:" target="9jA-As-nyu" id="j0g-WZ-39B"/>
+                                                    </connections>
                                                 </button>
                                                 <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hzT-eN-Vqj">
                                                     <rect key="frame" x="31" y="6" width="25" height="25"/>
@@ -903,15 +907,12 @@
                 <outlet property="notebooksView" destination="lUq-U4-iHT" id="t8B-6X-k5t"/>
             </connections>
         </viewController>
-        <viewController id="PBI-im-uBE" customClass="NotebooksViewController"/>
-        <treeController childrenKeyPath="children" id="efA-Ic-zdQ" customClass="FolderTreeController">
+        <treeController mode="entity" entityName="Notebooks" automaticallyPreparesContent="YES" childrenKeyPath="children" id="9jA-As-nyu" userLabel="Notebooks">
             <connections>
-                <outlet property="content" destination="ItE-AN-ya5" id="816-pm-9Rj"/>
-                <outlet property="folderView" destination="ItE-AN-ya5" id="HaN-qe-23t"/>
-                <outlet property="mainViewContoller" destination="FDn-K1-gTI" id="41T-Ix-b7D"/>
-                <outlet property="window" destination="QvC-M9-y7g" id="pQg-8b-bsc"/>
+                <binding destination="Voe-Tx-rLC" name="managedObjectContext" keyPath="self.managedObjectContext" id="1jA-Fx-FQz"/>
             </connections>
         </treeController>
+        <userDefaultsController representsSharedInstance="YES" id="gqj-qT-dvb"/>
     </objects>
     <resources>
         <image name="NSActionTemplate" width="14" height="14"/>
