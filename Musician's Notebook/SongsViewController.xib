@@ -8,8 +8,10 @@
         <customObject id="-2" userLabel="File's Owner" customClass="SongsViewController">
             <connections>
                 <outlet property="songArray" destination="4Sh-nk-aQG" id="jal-ko-1e2"/>
+                <outlet property="songName" destination="qRj-N7-LaC" id="e98-Yi-Wdv"/>
                 <outlet property="songView" destination="kuq-qn-dYO" id="g0y-if-6Wt"/>
                 <outlet property="splitView" destination="oN0-MT-z3l" id="ZFI-d3-Azd"/>
+                <outlet property="tabControl" destination="d4v-eC-bU3" id="SgA-kA-1ES"/>
                 <outlet property="tabView" destination="UNA-n0-3OT" id="m0a-KX-1jh"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>

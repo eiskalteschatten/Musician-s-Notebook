@@ -11,14 +11,18 @@
 
 @interface SongsViewController : NSViewController
 
+@property (assign) IBOutlet NSWindow *window;
 @property (strong) IBOutlet NSSplitView *splitView;
+@property (assign) IBOutlet NSSegmentedControl *tabControl;
 @property (assign) IBOutlet NSTabView *tabView;
 @property (assign) IBOutlet NSTableView *songView;
 @property (assign) IBOutlet SongArrayController *songArray;
+@property (assign) IBOutlet NSTextField *songName;
 
 @property (assign) NSInteger clickedSegment;
 
 - (IBAction)switchTab:(id)sender;
+- (void)changeTab:(NSInteger)tabIndex;
 - (IBAction)addSong:(id)sender;
 
 @end

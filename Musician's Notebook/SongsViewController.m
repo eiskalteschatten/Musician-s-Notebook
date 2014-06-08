@@ -29,7 +29,12 @@
 - (IBAction)switchTab:(id)sender {
     _clickedSegment = [sender selectedSegment];
     
-    [_tabView selectTabViewItemAtIndex:_clickedSegment];
+    [self changeTab:_clickedSegment];
+}
+
+- (void)changeTab:(NSInteger)tabIndex {
+    [_tabView selectTabViewItemAtIndex:tabIndex];
+    [_tabControl setSelectedSegment:tabIndex];
 }
 
 #pragma mark -
@@ -37,8 +42,8 @@
 
 - (IBAction)addSong:(id)sender {
     [_songArray add:self];
-    
-    
+    [self changeTab:0];
+    [_window makeFirstResponder:_songName];
 }
 
 #pragma mark -

@@ -855,7 +855,11 @@
                 <outlet property="window" destination="QvC-M9-y7g" id="csF-sB-0WO"/>
             </connections>
         </viewController>
-        <viewController id="CaB-8e-SQj" customClass="SongsViewController"/>
+        <viewController id="CaB-8e-SQj" customClass="SongsViewController">
+            <connections>
+                <outlet property="window" destination="QvC-M9-y7g" id="BBj-o2-Icj"/>
+            </connections>
+        </viewController>
         <treeController childrenKeyPath="children" id="efA-Ic-zdQ" customClass="FolderTreeController">
             <connections>
                 <outlet property="content" destination="ItE-AN-ya5" id="816-pm-9Rj"/>
