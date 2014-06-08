@@ -20,6 +20,7 @@
 
 @property (assign) IBOutlet NSTextField *songName;
 @property (assign) IBOutlet NSImageView *artworkView;
+@property (assign) IBOutlet NSTextView *tabsView;
 
 @property (assign) NSInteger clickedSegment;
 
