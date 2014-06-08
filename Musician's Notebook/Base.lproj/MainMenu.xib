@@ -799,7 +799,7 @@
                     <constraint firstAttribute="trailing" secondItem="mTP-n8-yQi" secondAttribute="trailing" id="ldM-jp-eui"/>
                 </constraints>
             </view>
-            <toolbar key="toolbar" implicitIdentifier="F2EE5CE8-7F30-4494-A7DD-60B20C64BBBB" autosavesConfiguration="NO" displayMode="iconOnly" sizeMode="regular" id="tqg-0M-AiF">
+            <toolbar key="toolbar" implicitIdentifier="F2EE5CE8-7F30-4494-A7DD-60B20C64BBBB" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="tqg-0M-AiF">
                 <allowedToolbarItems>
                     <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="ub9-ZO-v5T"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="Nxp-Yc-yTG"/>
