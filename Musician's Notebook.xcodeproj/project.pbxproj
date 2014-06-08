@@ -15,6 +15,7 @@
 		93EA93BD1944628000A61521 /* SongPaneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EA93BC1944628000A61521 /* SongPaneView.m */; };
 		93EA93C11944DA0500A61521 /* NotebooksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EA93C01944DA0500A61521 /* NotebooksView.m */; };
 		93EA93CA1944DE5E00A61521 /* MainWindowViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EA93C91944DE5E00A61521 /* MainWindowViewContoller.m */; };
+		93EA93D51944E55600A61521 /* NotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EA93D41944E55600A61521 /* NotebooksViewController.m */; };
 		93FAA6A2190291E0009F7624 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FAA6A1190291E0009F7624 /* Cocoa.framework */; };
 		93FAA6AC190291E0009F7624 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93FAA6AA190291E0009F7624 /* InfoPlist.strings */; };
 		93FAA6AE190291E0009F7624 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93FAA6AD190291E0009F7624 /* main.m */; };
@@ -56,6 +57,8 @@
 		93EA93C01944DA0500A61521 /* NotebooksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotebooksView.m; sourceTree = "<group>"; };
 		93EA93C81944DE5E00A61521 /* MainWindowViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowViewContoller.h; sourceTree = "<group>"; };
 		93EA93C91944DE5E00A61521 /* MainWindowViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowViewContoller.m; sourceTree = "<group>"; };
+		93EA93D31944E55600A61521 /* NotebooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotebooksViewController.h; sourceTree = "<group>"; };
+		93EA93D41944E55600A61521 /* NotebooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotebooksViewController.m; sourceTree = "<group>"; };
 		93FAA69E190291E0009F7624 /* Musician's Notebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Musician's Notebook.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FAA6A1190291E0009F7624 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		93FAA6A4190291E0009F7624 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -131,6 +134,8 @@
 			children = (
 				93EA93BF1944DA0500A61521 /* NotebooksView.h */,
 				93EA93C01944DA0500A61521 /* NotebooksView.m */,
+				93EA93D31944E55600A61521 /* NotebooksViewController.h */,
+				93EA93D41944E55600A61521 /* NotebooksViewController.m */,
 			);
 			name = Notebooks;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 				93FAA6AE190291E0009F7624 /* main.m in Sources */,
 				93EA93C11944DA0500A61521 /* NotebooksView.m in Sources */,
 				93EA93BD1944628000A61521 /* SongPaneView.m in Sources */,
+				93EA93D51944E55600A61521 /* NotebooksViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

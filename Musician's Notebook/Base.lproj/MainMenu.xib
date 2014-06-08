@@ -699,7 +699,7 @@
                                                     <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                     <tableColumns>
-                                                        <tableColumn identifier="AutomaticTableColumnIdentifier.0" width="222" minWidth="16" maxWidth="1000" id="GtP-NK-Ffj">
+                                                        <tableColumn identifier="notebooksCell" width="222" minWidth="16" maxWidth="1000" id="GtP-NK-Ffj">
                                                             <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
                                                                 <font key="font" metaFont="smallSystem"/>
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -760,6 +760,9 @@
                                                             </connections>
                                                         </tableColumn>
                                                     </tableColumns>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="PBI-im-uBE" id="PXE-nV-XFg"/>
+                                                    </connections>
                                                 </outlineView>
                                             </subviews>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -873,9 +876,6 @@
                 </allowedToolbarItems>
                 <defaultToolbarItems>
                     <toolbarItem reference="G6Y-3r-vwA"/>
-                    <toolbarItem reference="ub9-ZO-v5T"/>
-                    <toolbarItem reference="Nxp-Yc-yTG"/>
-                    <toolbarItem reference="Th5-us-nEK"/>
                     <toolbarItem reference="oc5-Ey-OA6"/>
                     <toolbarItem reference="dqG-aS-kJa"/>
                 </defaultToolbarItems>
@@ -903,6 +903,7 @@
                 <outlet property="notebooksView" destination="lUq-U4-iHT" id="t8B-6X-k5t"/>
             </connections>
         </viewController>
+        <viewController id="PBI-im-uBE" customClass="NotebooksViewController"/>
         <treeController childrenKeyPath="children" id="efA-Ic-zdQ" customClass="FolderTreeController">
             <connections>
                 <outlet property="content" destination="ItE-AN-ya5" id="816-pm-9Rj"/>
