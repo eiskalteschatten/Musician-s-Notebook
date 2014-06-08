@@ -12,7 +12,7 @@
 
 -(id)newObject {
     id newObj = [super newObject];
-//    [newObj setValue:@"test" forKey:@"name"];
+    //[newObj setValue:@"test" forKey:@"name"];
     
     return newObj;
 }

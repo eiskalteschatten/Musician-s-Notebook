@@ -33,7 +33,7 @@
         [_mainView.subviews[0] removeFromSuperview];
     }
     
-    NSView * view = [controller view];
+    NSView *view = [controller view];
     [view setTranslatesAutoresizingMaskIntoConstraints:NO];
     [_mainView addSubview:view];
     

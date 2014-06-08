@@ -44,14 +44,14 @@
     [_songArray add:self];
     [self changeTab:0];
     [_window makeFirstResponder:_songName];
+    [_artworkView setImage:[NSImage imageNamed:@"Drag and Drop Artwork"]];
 }
 
 #pragma mark -
 #pragma mark Table View Delagte methods
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    //return [_noteController getNumberOfNotes];
-    return 0;
+    return [_songArray.arrangedObjects count];
 }
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
@@ -60,7 +60,7 @@
     if ([identifier isEqualToString:@"MainCell"]) {
         NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"MainCell" owner:self];
         
-        [cellView.imageView setImage:[NSImage imageNamed:@"Music Note"]];
+        //[cellView.imageView setImage:[NSImage imageNamed:@"Music Note"]];
         //[cellView.subviews[1] setStringValue:@"New Song"];
         //[cellView.subviews[2] setStringValue:@"test"];
 
@@ -75,6 +75,13 @@
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
+    if ([_artworkView image] == nil) {
+       [_artworkView setImage:[NSImage imageNamed:@"Drag and Drop Artwork"]];
+    }
+    
+//    NSArray *tests = _songArray.arrangedObjects;
+//    NSLog( @"%@", _songArray);
+    
 //    _selectedNote = [pageList selectedRow];
 //    
 //    if (_selectedNote != -1) {

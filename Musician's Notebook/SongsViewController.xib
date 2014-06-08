@@ -7,6 +7,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SongsViewController">
             <connections>
+                <outlet property="artworkView" destination="xWg-d0-ug6" id="jOE-iP-KLY"/>
                 <outlet property="songArray" destination="4Sh-nk-aQG" id="jal-ko-1e2"/>
                 <outlet property="songName" destination="qRj-N7-LaC" id="e98-Yi-Wdv"/>
                 <outlet property="songView" destination="kuq-qn-dYO" id="g0y-if-6Wt"/>
@@ -17,7 +18,11 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application">
+            <connections>
+                <outlet property="delegate" destination="vXG-g7-BTo" id="eSq-p7-WDP"/>
+            </connections>
+        </customObject>
         <customView id="Hz6-mo-xeY">
             <rect key="frame" x="0.0" y="0.0" width="807" height="647"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -38,7 +43,7 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="60" viewBased="YES" id="kuq-qn-dYO">
-                                                <rect key="frame" x="0.0" y="0.0" width="230" height="494"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="687"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <size key="intercellSpacing" width="3" height="2"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -62,7 +67,7 @@
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <subviews>
                                                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OVL-f5-1GN">
-                                                                        <rect key="frame" x="3" y="10" width="40" height="40"/>
+                                                                        <rect key="frame" x="8" y="10" width="40" height="40"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="40" id="Th9-Xd-vl5"/>
@@ -74,29 +79,44 @@
                                                                         </connections>
                                                                     </imageView>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l9s-1f-ReQ">
-                                                                        <rect key="frame" x="49" y="10" width="38" height="17"/>
+                                                                        <rect key="frame" x="54" y="10" width="38" height="17"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" placeholderString="Album" id="l6m-4D-3oL">
                                                                             <font key="font" metaFont="smallSystem"/>
                                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                         </textFieldCell>
+                                                                        <connections>
+                                                                            <binding destination="Ajd-UY-4o6" name="value" keyPath="objectValue.album" id="WOI-b5-M5s">
+                                                                                <dictionary key="options">
+                                                                                    <string key="NSNoSelectionPlaceholder">Album</string>
+                                                                                    <string key="NSNullPlaceholder">Album</string>
+                                                                                </dictionary>
+                                                                            </binding>
+                                                                        </connections>
                                                                     </textField>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eIo-HB-HFt">
-                                                                        <rect key="frame" x="49" y="33" width="95" height="17"/>
+                                                                        <rect key="frame" x="54" y="33" width="95" height="17"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" placeholderString="New Song" id="GqB-hd-64t">
                                                                             <font key="font" metaFont="system"/>
                                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                         </textFieldCell>
+                                                                        <connections>
+                                                                            <binding destination="Ajd-UY-4o6" name="value" keyPath="objectValue.name" id="9vF-Yp-3KD">
+                                                                                <dictionary key="options">
+                                                                                    <string key="NSNoSelectionPlaceholder">New Song</string>
+                                                                                    <string key="NSNullPlaceholder">New Song</string>
+                                                                                </dictionary>
+                                                                            </binding>
+                                                                        </connections>
                                                                     </textField>
                                                                 </subviews>
                                                                 <constraints>
                                                                     <constraint firstItem="l9s-1f-ReQ" firstAttribute="leading" secondItem="OVL-f5-1GN" secondAttribute="trailing" constant="8" id="0ml-uX-sBA"/>
-                                                                    <constraint firstItem="OVL-f5-1GN" firstAttribute="leading" secondItem="Ajd-UY-4o6" secondAttribute="leading" id="ClV-Kc-0I7"/>
+                                                                    <constraint firstItem="OVL-f5-1GN" firstAttribute="leading" secondItem="Ajd-UY-4o6" secondAttribute="leading" constant="10" id="ClV-Kc-0I7"/>
                                                                     <constraint firstItem="eIo-HB-HFt" firstAttribute="top" secondItem="Ajd-UY-4o6" secondAttribute="top" constant="10" id="YLl-MC-LMG"/>
-                                                                    <constraint firstAttribute="trailing" secondItem="l9s-1f-ReQ" secondAttribute="trailing" constant="138" id="a1n-zN-jdA"/>
                                                                     <constraint firstItem="eIo-HB-HFt" firstAttribute="leading" secondItem="OVL-f5-1GN" secondAttribute="trailing" constant="8" id="eOZ-Mz-i9S"/>
                                                                     <constraint firstAttribute="centerY" secondItem="OVL-f5-1GN" secondAttribute="centerY" id="f64-XO-nN0"/>
                                                                     <constraint firstItem="l9s-1f-ReQ" firstAttribute="top" secondItem="eIo-HB-HFt" secondAttribute="bottom" constant="6" id="qh3-aq-xqY"/>
@@ -112,6 +132,8 @@
                                                     </tableColumn>
                                                 </tableColumns>
                                                 <connections>
+                                                    <binding destination="4Sh-nk-aQG" name="content" keyPath="arrangedObjects" id="MGD-YX-BeM"/>
+                                                    <binding destination="4Sh-nk-aQG" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="MGD-YX-BeM" id="vKN-rQ-1RP"/>
                                                     <outlet property="delegate" destination="-2" id="kch-nM-luh"/>
                                                 </connections>
                                             </tableView>
@@ -142,7 +164,7 @@
                                                     <font key="font" metaFont="system"/>
                                                 </buttonCell>
                                                 <connections>
-                                                    <action selector="addSong:" target="-2" id="Tvq-nQ-dnA"/>
+                                                    <action selector="addSong:" target="-2" id="NYS-Vy-i5I"/>
                                                 </connections>
                                             </button>
                                             <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lkR-75-SZH">
@@ -196,7 +218,7 @@
                                     <tabViewItems>
                                         <tabViewItem label="Song" identifier="1" id="m42-Kz-uve">
                                             <view key="view" id="Qd7-8f-qFa">
-                                                <rect key="frame" x="0.0" y="0.0" width="492" height="597"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="471" height="597"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uDR-Ba-saa">
@@ -216,6 +238,9 @@
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="4Sh-nk-aQG" name="value" keyPath="selection.name" id="ihE-ah-by6"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gRs-aw-YpQ">
                                                         <rect key="frame" x="18" y="360" width="68" height="17"/>
@@ -234,6 +259,9 @@
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="4Sh-nk-aQG" name="value" keyPath="selection.composer" id="fES-SW-2hx"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XYE-WK-DDl">
                                                         <rect key="frame" x="18" y="305" width="42" height="17"/>
@@ -252,6 +280,9 @@
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="4Sh-nk-aQG" name="value" keyPath="selection.genre" id="JFR-cZ-C55"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="baC-CK-h6a">
                                                         <rect key="frame" x="18" y="525" width="38" height="17"/>
@@ -279,6 +310,9 @@
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="4Sh-nk-aQG" name="value" keyPath="selection.artist" id="Wx0-PL-fId"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eLd-qy-iFR">
                                                         <rect key="frame" x="18" y="250" width="54" height="17"/>
@@ -292,7 +326,10 @@
                                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xWg-d0-ug6">
                                                         <rect key="frame" x="20" y="20" width="451" height="222"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <imageCell key="cell" selectable="YES" editable="YES" alignment="left" imageScaling="proportionallyDown" image="Drag and Drop Artwork" id="lVi-NW-q7I"/>
+                                                        <imageCell key="cell" selectable="YES" editable="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="Drag and Drop Artwork" id="lVi-NW-q7I"/>
+                                                        <connections>
+                                                            <binding destination="4Sh-nk-aQG" name="value" keyPath="selection.artwork" id="iIH-Mq-R31"/>
+                                                        </connections>
                                                     </imageView>
                                                     <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bSc-fe-o77">
                                                         <rect key="frame" x="381" y="495" width="96" height="22"/>
@@ -305,6 +342,9 @@
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="4Sh-nk-aQG" name="value" keyPath="selection.year" id="MKy-5p-Ql1"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="th4-ui-bqB">
                                                         <rect key="frame" x="18" y="470" width="84" height="17"/>
@@ -335,6 +375,9 @@
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="4Sh-nk-aQG" name="value" keyPath="selection.album_artist" id="wXS-Ei-Zas"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ncL-bT-g7O">
                                                         <rect key="frame" x="381" y="440" width="37" height="22"/>
@@ -347,6 +390,9 @@
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="4Sh-nk-aQG" name="value" keyPath="selection.track_number_start" id="M9u-nS-IB6"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5qa-R9-czR">
                                                         <rect key="frame" x="440" y="440" width="37" height="22"/>
@@ -359,6 +405,9 @@
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="4Sh-nk-aQG" name="value" keyPath="selection.track_number_end" id="7V5-x7-ZFN"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jK5-vd-zmL">
                                                         <rect key="frame" x="421" y="444" width="17" height="14"/>
@@ -398,6 +447,9 @@
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="4Sh-nk-aQG" name="value" keyPath="selection.album" id="Tz4-5A-bef"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HHg-lZ-YAV">
                                                         <rect key="frame" x="381" y="385" width="37" height="22"/>
@@ -410,6 +462,9 @@
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="4Sh-nk-aQG" name="value" keyPath="selection.disc_number_start" id="LD1-Jr-FQd"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ssL-1p-Xfd">
                                                         <rect key="frame" x="440" y="385" width="37" height="22"/>
@@ -422,6 +477,9 @@
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="4Sh-nk-aQG" name="value" keyPath="selection.disc_number_end" id="hH9-Ag-9qe"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D0n-Xo-f4Z">
                                                         <rect key="frame" x="421" y="389" width="17" height="14"/>
@@ -492,7 +550,7 @@
                                         </tabViewItem>
                                         <tabViewItem label="Lyrics" identifier="" id="GAU-4B-CJn">
                                             <view key="view" id="v0d-3f-hqe">
-                                                <rect key="frame" x="0.0" y="0.0" width="471" height="549"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="471" height="597"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <scrollView misplaced="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxF-Ax-ZwK">
@@ -511,6 +569,9 @@
                                                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <size key="minSize" width="359" height="296"/>
                                                                     <size key="maxSize" width="463" height="10000000"/>
+                                                                    <connections>
+                                                                        <binding destination="4Sh-nk-aQG" name="valuePath" keyPath="selection.lyrics" id="9WH-2v-jcx"/>
+                                                                    </connections>
                                                                 </textView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -535,11 +596,11 @@
                                         </tabViewItem>
                                         <tabViewItem label="Audio" identifier="" id="Kt4-Ke-Gih">
                                             <view key="view" id="XFR-Lx-6a5">
-                                                <rect key="frame" x="0.0" y="0.0" width="471" height="549"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="471" height="597"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bW5-Cr-wqB">
-                                                        <rect key="frame" x="292" y="68" width="87" height="25"/>
+                                                        <rect key="frame" x="292" y="116" width="87" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Remove" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ns2-Fo-aXF">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -547,7 +608,7 @@
                                                         </buttonCell>
                                                     </button>
                                                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Otl-gj-bs2">
-                                                        <rect key="frame" x="387" y="68" width="64" height="25"/>
+                                                        <rect key="frame" x="387" y="116" width="64" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <buttonCell key="cell" type="roundTextured" title="Add" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="WZ3-ic-OaC">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -559,7 +620,7 @@
                                         </tabViewItem>
                                         <tabViewItem label="Tabs" identifier="2" id="v6q-BU-Q0S">
                                             <view key="view" id="gom-mA-kcW">
-                                                <rect key="frame" x="0.0" y="0.0" width="471" height="549"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="471" height="597"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <scrollView misplaced="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaH-Pv-Ieh">
@@ -578,6 +639,9 @@
                                                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <size key="minSize" width="240" height="135"/>
                                                                     <size key="maxSize" width="463" height="10000000"/>
+                                                                    <connections>
+                                                                        <binding destination="4Sh-nk-aQG" name="value" keyPath="selection.tabs" id="5eJ-36-Ftb"/>
+                                                                    </connections>
                                                                 </textView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -602,13 +666,13 @@
                                         </tabViewItem>
                                         <tabViewItem label="Chords" identifier="" id="QhC-El-s68">
                                             <view key="view" id="qPs-bs-dZA">
-                                                <rect key="frame" x="0.0" y="0.0" width="471" height="549"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="471" height="597"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                         </tabViewItem>
                                         <tabViewItem label="Notes" identifier="" id="u6O-Gl-HGL">
                                             <view key="view" id="XG5-dS-pTk">
-                                                <rect key="frame" x="0.0" y="0.0" width="471" height="549"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="471" height="597"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <scrollView misplaced="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC7-b2-0Zj">
@@ -627,6 +691,9 @@
                                                                     <color key="insertionPointColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <size key="minSize" width="240" height="135"/>
                                                                     <size key="maxSize" width="463" height="10000000"/>
+                                                                    <connections>
+                                                                        <binding destination="4Sh-nk-aQG" name="valuePath" keyPath="selection.notes" id="DId-Ae-aGE"/>
+                                                                    </connections>
                                                                 </textView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -636,7 +703,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="CVl-WS-xrW">
-                                                            <rect key="frame" x="455" y="0.0" width="16" height="549"/>
+                                                            <rect key="frame" x="224" y="0.0" width="16" height="135"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                     </scrollView>
@@ -694,10 +761,9 @@
             </constraints>
         </customView>
         <customObject id="vXG-g7-BTo" customClass="AppDelegate"/>
-        <arrayController mode="entity" entityName="Song" id="4Sh-nk-aQG" userLabel="Songs" customClass="SongArrayController">
+        <arrayController mode="entity" entityName="Song" automaticallyPreparesContent="YES" id="4Sh-nk-aQG" userLabel="Songs" customClass="SongArrayController">
             <connections>
-                <binding destination="vXG-g7-BTo" name="managedObjectContext" keyPath="managedObjectContext" id="djW-Q0-MIK"/>
-                <outlet property="tableView" destination="kuq-qn-dYO" id="glZ-3F-v6P"/>
+                <binding destination="vXG-g7-BTo" name="managedObjectContext" keyPath="self.managedObjectContext" id="6pn-oj-sa9"/>
             </connections>
         </arrayController>
         <userDefaultsController representsSharedInstance="YES" id="D06-FG-a6W"/>
