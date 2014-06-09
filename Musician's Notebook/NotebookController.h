@@ -10,4 +10,6 @@
 
 @interface NotebookController : NSObject
 
+@property (assign) IBOutlet NSTreeController *notebookTree;
+
 @end

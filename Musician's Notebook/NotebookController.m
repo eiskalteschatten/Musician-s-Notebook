@@ -10,6 +10,36 @@
 
 @implementation NotebookController
 
+
+- (void)awakeFromNib {
+//    NSMutableDictionary *root = @{@"title": @"BOOKS",
+//                                  @"isLeaf": @(NO),
+//                                  @"children":@[
+//                                          [Book bookWithTitle:@"To Kill a Mockingbird" andAuthor:@"Harper Lee"],
+//                                          [Book bookWithTitle:@"Pride and Prejudice" andAuthor:@"Jane Austen"],
+//                                          [Book bookWithTitle:@"The Catcher in the Rye" andAuthor:@"J.D. Salinger"]
+//                                          ].mutableCopy
+//                                  }.mutableCopy;
+
+    NSMutableDictionary *mainItems = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"Header", @"Library", [NSMutableArray array], @"children", nil];
+    NSMutableDictionary *subItems = [NSMutableDictionary dictionaryWithObjectsAndKeys: @"All Songs", @"All Songs", [NSMutableArray array], @"children", nil];
+    [[mainItems objectForKey: @"children"] addObject: subItems];
+    
+//    [_notebookTree insertObject:mainItems atArrangedObjectIndexPath:[NSIndexPath indexPathWithIndex:0]];
+}
+
+- (int)outlineView:(NSOutlineView *)outlineView numberOfChildrenOfItem:(id)item {
+    return nil;
+}
+
+- (id)outlineView:(NSOutlineView *)outlineView child:(int)index ofItem:(id)item {
+    return nil;
+}
+
+- (BOOL)outlineView:(NSOutlineView *)outlineView isItemExpandable:(id)item {
+    return NO;
+}
+
 - (NSView *)outlineView:(NSOutlineView *)outlineView viewForTableColumn:(NSTableColumn *)tableColumn item:(id)item {
     NSTableCellView *view = nil;
     

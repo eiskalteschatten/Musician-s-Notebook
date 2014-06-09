@@ -18,7 +18,11 @@
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
-        <customObject id="xu3-lj-8gC" customClass="NotebookController"/>
+        <customObject id="xu3-lj-8gC" customClass="NotebookController">
+            <connections>
+                <outlet property="notebookTree" destination="9jA-As-nyu" id="ESy-Ec-BSM"/>
+            </connections>
+        </customObject>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="Musician's Notebook" id="1Xt-HY-uBw">
