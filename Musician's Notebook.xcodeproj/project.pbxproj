@@ -11,6 +11,7 @@
 		93ABC59519155E99004AF635 /* SongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC59319155E99004AF635 /* SongsViewController.m */; };
 		93ABC59619155E99004AF635 /* SongsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC59419155E99004AF635 /* SongsViewController.xib */; };
 		93ABC59A19155FFA004AF635 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC59919155FFA004AF635 /* MainViewController.m */; };
+		93CDDF6B194BB859008BB20F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93CDDF6A194BB859008BB20F /* AVFoundation.framework */; };
 		93EA93BD1944628000A61521 /* SongPaneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EA93BC1944628000A61521 /* SongPaneView.m */; };
 		93EA93C11944DA0500A61521 /* NotebooksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EA93C01944DA0500A61521 /* NotebooksView.m */; };
 		93EA93CA1944DE5E00A61521 /* MainWindowViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 93EA93C91944DE5E00A61521 /* MainWindowViewContoller.m */; };
@@ -48,6 +49,7 @@
 		93ABC59419155E99004AF635 /* SongsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SongsViewController.xib; sourceTree = "<group>"; };
 		93ABC59819155FFA004AF635 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		93ABC59919155FFA004AF635 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		93CDDF6A194BB859008BB20F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		93EA93BB1944628000A61521 /* SongPaneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongPaneView.h; sourceTree = "<group>"; };
 		93EA93BC1944628000A61521 /* SongPaneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongPaneView.m; sourceTree = "<group>"; };
 		93EA93BF1944DA0500A61521 /* NotebooksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotebooksView.h; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93CDDF6B194BB859008BB20F /* AVFoundation.framework in Frameworks */,
 				93FAA6A2190291E0009F7624 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,6 +160,7 @@
 		93FAA6A0190291E0009F7624 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93CDDF6A194BB859008BB20F /* AVFoundation.framework */,
 				93FAA6A1190291E0009F7624 /* Cocoa.framework */,
 				93FAA6C3190291E0009F7624 /* XCTest.framework */,
 				93FAA6A3190291E0009F7624 /* Other Frameworks */,
@@ -469,11 +473,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Musician's Notebook/Musician's Notebook.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Musician's Notebook/Musician's Notebook-Prefix.pch";
 				INFOPLIST_FILE = "Musician's Notebook/Musician's Notebook-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx10.8;
 				WRAPPER_EXTENSION = app;
@@ -485,11 +490,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Musician's Notebook/Musician's Notebook.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Musician's Notebook/Musician's Notebook-Prefix.pch";
 				INFOPLIST_FILE = "Musician's Notebook/Musician's Notebook-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx10.8;
 				WRAPPER_EXTENSION = app;
