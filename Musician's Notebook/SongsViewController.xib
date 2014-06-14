@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment defaultVersion="1090" identifier="macosx"/>
+        <deployment defaultVersion="1080" identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
     </dependencies>
     <objects>
@@ -572,7 +572,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="SnX-hi-nTu">
-                                                            <rect key="frame" x="343" y="0.0" width="16" height="296"/>
+                                                            <rect key="frame" x="455" y="0.0" width="16" height="597"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                     </scrollView>
@@ -587,7 +587,7 @@
                                         </tabViewItem>
                                         <tabViewItem label="Audio" identifier="" id="Kt4-Ke-Gih">
                                             <view key="view" id="XFR-Lx-6a5">
-                                                <rect key="frame" x="0.0" y="0.0" width="492" height="597"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="471" height="597"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bW5-Cr-wqB">
@@ -710,7 +710,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="RYs-zJ-Xq9">
-                                                            <rect key="frame" x="224" y="0.0" width="16" height="135"/>
+                                                            <rect key="frame" x="455" y="0.0" width="16" height="597"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                     </scrollView>
