@@ -11,7 +11,7 @@
 
 @interface MainWindowViewContoller : NSViewController
 
-@property (assign) IBOutlet NotebooksView *notebooksView;
+@property (retain) IBOutlet NotebooksView *notebooksView;
 @property (assign) IBOutlet NSOutlineView *notebooksSourceList;
 
 @end

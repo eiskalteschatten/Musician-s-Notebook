@@ -32,8 +32,8 @@
         <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" spotlightIndexingEnabled="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Notebooks" positionX="-200" positionY="50" width="128" height="133"/>
-        <element name="Song" positionX="-45" positionY="18" width="128" height="313"/>
         <element name="Audio" positionX="-126" positionY="171" width="128" height="58"/>
+        <element name="Notebooks" positionX="-200" positionY="50" width="128" height="133"/>
+        <element name="Song" positionX="-45" positionY="18" width="128" height="315"/>
     </elements>
 </model>

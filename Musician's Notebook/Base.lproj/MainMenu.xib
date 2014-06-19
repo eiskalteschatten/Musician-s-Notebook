@@ -14,6 +14,7 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="notebookController" destination="xu3-lj-8gC" id="V9l-Jt-dzR"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -21,6 +22,7 @@
         <customObject id="xu3-lj-8gC" customClass="NotebookController">
             <connections>
                 <outlet property="notebookTree" destination="9jA-As-nyu" id="ESy-Ec-BSM"/>
+                <outlet property="notebooks" destination="ItE-AN-ya5" id="veM-vd-GKQ"/>
             </connections>
         </customObject>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
@@ -760,7 +762,7 @@
                                                                 </tableCellView>
                                                             </prototypeCellViews>
                                                             <connections>
-                                                                <binding destination="9jA-As-nyu" name="value" keyPath="arrangedObjects" id="H9A-2n-sep"/>
+                                                                <binding destination="9jA-As-nyu" name="value" keyPath="arrangedObjects" id="i7y-z6-p6u"/>
                                                             </connections>
                                                         </tableColumn>
                                                     </tableColumns>
@@ -805,6 +807,9 @@
                                                         <behavior key="behavior" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="insertStandardItems:" target="xu3-lj-8gC" id="5qw-M9-Yas"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -910,7 +915,7 @@
                 <outlet property="notebooksView" destination="lUq-U4-iHT" id="t8B-6X-k5t"/>
             </connections>
         </viewController>
-        <treeController mode="entity" entityName="Notebooks" automaticallyPreparesContent="YES" childrenKeyPath="children" id="9jA-As-nyu" userLabel="Notebooks">
+        <treeController mode="entity" entityName="Notebooks" automaticallyPreparesContent="YES" childrenKeyPath="children" leafKeyPath="isLeaf" id="9jA-As-nyu" userLabel="Notebooks">
             <connections>
                 <binding destination="Voe-Tx-rLC" name="managedObjectContext" keyPath="self.managedObjectContext" id="1jA-Fx-FQz"/>
             </connections>
