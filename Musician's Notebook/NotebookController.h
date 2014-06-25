@@ -21,5 +21,9 @@
 - (void)insertStandardItems;
 - (void)fillNotebooks;
 - (BOOL)isHeader:(id)item;
+- (void)selectParentFromSelection;
+
+- (IBAction)addNotebook:(id)sender;
+- (IBAction)removeNotebook:(id)sender;
 
 @end

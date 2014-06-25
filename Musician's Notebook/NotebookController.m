@@ -24,7 +24,7 @@
         _initialize = NO;
         [_notebooks setDataSource:_notebookDataSource];
         [self insertStandardItems];
-     //   [self fillNotebooks];
+        [self fillNotebooks];
     }
 }
 
@@ -56,17 +56,71 @@
                                           ].mutableCopy
                                   }.mutableCopy;
     
-    [_notebookTree addObject:root];
+    NSIndexPath *indexPath = [_notebookTree selectionIndexPath];
+    
+    if ([[_notebookTree selectedObjects] count] == 0) {
+        NSLog(@"test");
+    }
+    if ([[[_notebookTree selectedObjects] objectAtIndex:0] isLeaf]) {
+        [self selectParentFromSelection];
+    }
+    else {
+        indexPath = [indexPath indexPathByAddingIndex:[[[[_notebookTree selectedObjects] objectAtIndex:0] children] count]];
+    }
+    
+    [_notebookTree insertObject:root atArrangedObjectIndexPath:indexPath];
 }
 
 - (BOOL)isHeader:(id)item {
     if([item isKindOfClass:[NSTreeNode class]]){
         return ![((NSTreeNode *)item).representedObject isKindOfClass:[Notebook class]];
-    } else {
+    }
+    else {
         return ![item isKindOfClass:[Notebook class]];
     }
 }
 
+- (void)selectParentFromSelection {
+	if ([[_notebookTree selectedNodes] count] > 0) {
+		NSTreeNode *firstSelectedNode = [[_notebookTree selectedNodes] objectAtIndex:0];
+		NSTreeNode *parentNode = [firstSelectedNode parentNode];
+		if (parentNode) {
+			// select the parent
+			NSIndexPath *parentIndex = [parentNode indexPath];
+			[_notebookTree setSelectionIndexPath:parentIndex];
+		}
+		else {
+			// no parent exists (we are at the top of tree), so make no selection in our outline
+			NSArray *selectionIndexPaths = [_notebookTree selectionIndexPaths];
+			[_notebookTree removeSelectionIndexPaths:selectionIndexPaths];
+		}
+	}
+}
+
+
+#pragma mark -
+#pragma mark Add and remove controls
+
+- (IBAction)addNotebook:(id)sender {
+    NSImageView *allSongsView = [[NSImageView alloc] init];
+    [allSongsView setImage: [NSImage imageNamed:@"Music Note"]];
+    Notebook *notebook = [Notebook notebookWithTitle:@"New Notebook" andImage:allSongsView];
+    
+    NSIndexPath *indexPath = [_notebookTree selectionIndexPath];
+    
+    if ([[[_notebookTree selectedObjects] objectAtIndex:0] isLeaf]) {
+        [self selectParentFromSelection];
+    }
+    else {
+        indexPath = [indexPath indexPathByAddingIndex:[[[[_notebookTree selectedObjects] objectAtIndex:0] children] count]];
+    }
+    
+    [_notebookTree insertObject:notebook atArrangedObjectIndexPath:indexPath];
+}
+
+- (IBAction)removeNotebook:(id)sender {
+    
+}
 
 
 #pragma mark -

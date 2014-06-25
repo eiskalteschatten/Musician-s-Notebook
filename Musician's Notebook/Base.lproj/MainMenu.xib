@@ -808,7 +808,7 @@
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
                                                     <connections>
-                                                        <action selector="add:" target="9jA-As-nyu" id="j0g-WZ-39B"/>
+                                                        <action selector="addNotebook:" target="xu3-lj-8gC" id="vHu-uY-WY1"/>
                                                     </connections>
                                                 </button>
                                                 <button focusRingType="none" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hzT-eN-Vqj">
@@ -818,6 +818,9 @@
                                                         <behavior key="behavior" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
+                                                    <connections>
+                                                        <action selector="removeNotebook:" target="xu3-lj-8gC" id="Jb0-dI-mfS"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -924,6 +927,11 @@
             </connections>
         </viewController>
         <treeController objectClassName="Notebook" childrenKeyPath="children" leafKeyPath="isLeaf" id="9jA-As-nyu" userLabel="Notebooks"/>
+        <treeController mode="entity" entityName="Notebooks" automaticallyPreparesContent="YES" childrenKeyPath="children" leafKeyPath="isLeaf" id="gxs-KN-dpw" userLabel="Folders">
+            <connections>
+                <binding destination="Voe-Tx-rLC" name="managedObjectContext" keyPath="self.managedObjectContext" id="6o7-Ig-4ed"/>
+            </connections>
+        </treeController>
         <userDefaultsController representsSharedInstance="YES" id="gqj-qT-dvb"/>
     </objects>
     <resources>

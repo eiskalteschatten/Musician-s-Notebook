@@ -134,6 +134,13 @@
 			name = SongsView;
 			sourceTree = "<group>";
 		};
+		93B98CA2195B58BF003EDD57 /* Folders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Folders;
+			sourceTree = "<group>";
+		};
 		93EA93BE1944D9F000A61521 /* Notebooks */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +152,7 @@
 				93B98CA0195B54B8003EDD57 /* NotebookDataSource.m */,
 				93B98C9C195B4220003EDD57 /* Notebook.h */,
 				93B98C9D195B4220003EDD57 /* Notebook.m */,
+				93B98CA2195B58BF003EDD57 /* Folders */,
 			);
 			name = Notebooks;
 			sourceTree = "<group>";
