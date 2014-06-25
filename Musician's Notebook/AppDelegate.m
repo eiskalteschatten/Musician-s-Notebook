@@ -15,7 +15,7 @@
 @synthesize managedObjectContext = _managedObjectContext;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-  //  [_notebookController insertStandardItems:nil];
+
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "Alex-Seifert.Musician_s_Notebook" in the user's Application Support directory.

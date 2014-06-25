@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ChildNode.h"
+#import "Notebook.h"
 
 @interface NotebookController : NSObject
 
@@ -16,11 +16,8 @@
 
 @property (assign) BOOL initialize;
 
-//- (void)insertStandardItems;
-- (IBAction)insertStandardItems:(id)sender;
-- (void)addFolder:(NSString *)folderName;
-- (void)selectParentFromSelection;
-- (void)populateOutline;
-- (void)addEntries:(NSDictionary *)entries discloseParent:(BOOL)discloseParent;
+- (void)insertStandardItems;
+- (void)fillNotebooks;
+- (BOOL)isHeader:(id)item;
 
 @end

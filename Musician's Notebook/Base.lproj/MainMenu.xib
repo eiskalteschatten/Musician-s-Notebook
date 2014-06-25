@@ -14,7 +14,6 @@
         <customObject id="-3" userLabel="Application"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="notebookController" destination="xu3-lj-8gC" id="V9l-Jt-dzR"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -25,6 +24,7 @@
                 <outlet property="notebooks" destination="ItE-AN-ya5" id="veM-vd-GKQ"/>
             </connections>
         </customObject>
+        <customObject id="GVT-3k-Vjc" customClass="Notebook"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="Musician's Notebook" id="1Xt-HY-uBw">
@@ -711,7 +711,7 @@
                                                                 <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
                                                             </tableHeaderCell>
-                                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="kjE-bo-4Je">
+                                                            <textFieldCell key="dataCell" lineBreakMode="truncatingMiddle" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="kjE-bo-4Je">
                                                                 <font key="font" metaFont="system"/>
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -730,6 +730,9 @@
                                                                                 <color key="textColor" red="0.43921568630000002" green="0.4941176471" blue="0.54901960780000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
+                                                                            <connections>
+                                                                                <binding destination="HhD-4U-Zlu" name="value" keyPath="objectValue.title" id="RaW-ap-pJh"/>
+                                                                            </connections>
                                                                         </textField>
                                                                     </subviews>
                                                                     <connections>
@@ -744,6 +747,9 @@
                                                                             <rect key="frame" x="3" y="0.0" width="17" height="17"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="E94-4P-aWS"/>
+                                                                            <connections>
+                                                                                <binding destination="1CR-dl-JEz" name="value" keyPath="objectValue.imageView" id="ekX-qr-12k"/>
+                                                                            </connections>
                                                                         </imageView>
                                                                         <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oY1-RA-56M">
                                                                             <rect key="frame" x="25" y="0.0" width="197" height="17"/>
@@ -753,6 +759,9 @@
                                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
+                                                                            <connections>
+                                                                                <binding destination="1CR-dl-JEz" name="value" keyPath="objectValue.title" id="QnZ-eD-gMk"/>
+                                                                            </connections>
                                                                         </textField>
                                                                     </subviews>
                                                                     <connections>
@@ -762,7 +771,7 @@
                                                                 </tableCellView>
                                                             </prototypeCellViews>
                                                             <connections>
-                                                                <binding destination="9jA-As-nyu" name="value" keyPath="arrangedObjects" id="i7y-z6-p6u"/>
+                                                                <binding destination="9jA-As-nyu" name="value" keyPath="arrangedObjects" id="MLA-D8-qYf"/>
                                                             </connections>
                                                         </tableColumn>
                                                     </tableColumns>
@@ -807,9 +816,6 @@
                                                         <behavior key="behavior" lightByContents="YES"/>
                                                         <font key="font" metaFont="system"/>
                                                     </buttonCell>
-                                                    <connections>
-                                                        <action selector="insertStandardItems:" target="xu3-lj-8gC" id="5qw-M9-Yas"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </view>
@@ -915,11 +921,7 @@
                 <outlet property="notebooksView" destination="lUq-U4-iHT" id="t8B-6X-k5t"/>
             </connections>
         </viewController>
-        <treeController mode="entity" entityName="Notebooks" automaticallyPreparesContent="YES" childrenKeyPath="children" leafKeyPath="isLeaf" id="9jA-As-nyu" userLabel="Notebooks">
-            <connections>
-                <binding destination="Voe-Tx-rLC" name="managedObjectContext" keyPath="self.managedObjectContext" id="1jA-Fx-FQz"/>
-            </connections>
-        </treeController>
+        <treeController objectClassName="Notebook" childrenKeyPath="children" leafKeyPath="isLeaf" id="9jA-As-nyu" userLabel="Notebooks"/>
         <userDefaultsController representsSharedInstance="YES" id="gqj-qT-dvb"/>
     </objects>
     <resources>
