@@ -20,11 +20,13 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <customObject id="xu3-lj-8gC" customClass="NotebookController">
             <connections>
+                <outlet property="notebookDataSource" destination="2F5-Db-Jvc" id="p6D-Ie-Thc"/>
                 <outlet property="notebookTree" destination="9jA-As-nyu" id="ESy-Ec-BSM"/>
                 <outlet property="notebooks" destination="ItE-AN-ya5" id="veM-vd-GKQ"/>
             </connections>
         </customObject>
         <customObject id="GVT-3k-Vjc" customClass="Notebook"/>
+        <customObject id="2F5-Db-Jvc" customClass="NotebookDataSource"/>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
                 <menuItem title="Musician's Notebook" id="1Xt-HY-uBw">

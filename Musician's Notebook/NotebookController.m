@@ -22,7 +22,7 @@
 - (void)awakeFromNib {
     if (_initialize) {
         _initialize = NO;
-        
+        [_notebooks setDataSource:_notebookDataSource];
         [self insertStandardItems];
      //   [self fillNotebooks];
     }

@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "Notebook.h"
+#import "NotebookDataSource.h"
 
-@interface NotebookController : NSObject
+@interface NotebookController : NSObject <NSOutlineViewDelegate>
 
 @property (assign) IBOutlet NSTreeController *notebookTree;
 @property (assign) IBOutlet NSOutlineView *notebooks;
+@property (assign) IBOutlet NotebookDataSource *notebookDataSource;
 
 @property (assign) BOOL initialize;
 
