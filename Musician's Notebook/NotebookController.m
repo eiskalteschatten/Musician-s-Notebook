@@ -56,18 +56,7 @@
                                           ].mutableCopy
                                   }.mutableCopy;
     
-    NSIndexPath *indexPath = [_notebookTree selectionIndexPath];
-    
-    if ([[_notebookTree selectedObjects] count] == 0) {
-        NSLog(@"test");
-    }
-    if ([[[_notebookTree selectedObjects] objectAtIndex:0] isLeaf]) {
-        [self selectParentFromSelection];
-    }
-    else {
-        indexPath = [indexPath indexPathByAddingIndex:[[[[_notebookTree selectedObjects] objectAtIndex:0] children] count]];
-    }
-    
+    NSIndexPath *indexPath = [NSIndexPath indexPathWithIndex:self.contents.count];
     [_notebookTree insertObject:root atArrangedObjectIndexPath:indexPath];
 }
 
