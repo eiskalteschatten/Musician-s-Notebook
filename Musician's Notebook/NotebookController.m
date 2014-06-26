@@ -23,11 +23,11 @@
     if (_initialize) {
         _initialize = NO;
         [_notebooks setDataSource:_notebookDataSource];
-        [self insertStandardItems];
+        [self setupNotebooks];
     }
 }
 
-- (void)insertStandardItems {    
+- (void)setupNotebooks {    
     NSMutableDictionary *root = @{@"title": @"LIBRARY",
                                   @"isLeaf": @(NO),
                                   @"children":@[
@@ -57,10 +57,11 @@
     [_notebooks expandItem:[_notebooks itemAtRow:0]];
     [_notebooks expandItem:[_notebooks itemAtRow:row+1]];
     [_notebooks selectRowIndexes:[NSIndexSet indexSetWithIndex:1] byExtendingSelection:NO];
+    [_notebooks registerForDraggedTypes: [NSArray arrayWithObject: @"public.text"]];
 }
 
 - (BOOL)isHeader:(id)item {
-    if([item isKindOfClass:[NSTreeNode class]]){
+    if ([item isKindOfClass:[NSTreeNode class]]) {
         return ![((NSTreeNode *)item).representedObject isKindOfClass:[Notebook class]];
     }
     else {
@@ -129,16 +130,78 @@
     return ![self isHeader:item];
 }
 
-- (void)outlineViewSelectionDidChange:(NSNotification *)notification {
-//    NSInteger selectedRow = [_notebooks selectedRow];
-//    id selectedItem = [_notebooks itemAtRow:selectedRow];
-    NSArray *nodes = [_notebookTree selectedNodes];
+- (void)outlineViewSelectionIsChanging:(NSNotification *)notification {
     NSArray *objects = [_notebookTree selectedObjects];
-    NSArray *indexPaths = [_notebookTree selectionIndexPaths];
     
-    for (id node in nodes) {
-
+    for (int i = 0; i < [objects count]; i++) {
+        id object = [objects objectAtIndex:i];
+        if ([object isKindOfClass:[Notebook class]]) {
+            [object removeAltImage];
+        }
     }
 }
+
+- (void)outlineViewSelectionDidChange:(NSNotification *)notification {
+    NSArray *objects = [_notebookTree selectedObjects];
+    
+    for (int i = 0; i < [objects count]; i++) {
+        id object = [objects objectAtIndex:i];
+        if ([object isKindOfClass:[Notebook class]]) {
+            [object setAltImage];
+        }
+    }
+}
+
+- (id <NSPasteboardWriting>)outlineView:(NSOutlineView *)outlineView pasteboardWriterForItem:(id)item {
+    BOOL dragAllowed = YES;
+    if (!dragAllowed) {
+        return nil;
+    }
+    
+    Notebook *notebook = (Notebook *)(((NSTreeNode *)item).representedObject);
+    NSString *identifier = notebook.title;
+    
+    NSPasteboardItem *pboardItem = [[NSPasteboardItem alloc] init];
+    [pboardItem setString:identifier forType: @"public.text"];
+    
+    return pboardItem;
+}
+
+
+- (NSDragOperation)outlineView:(NSOutlineView *)outlineView validateDrop:(id < NSDraggingInfo >)info proposedItem:(id)targetItem proposedChildIndex:(NSInteger)index {
+    BOOL canDrag = index >= 0 && targetItem;
+    
+    if (canDrag) {
+        return NSDragOperationMove;
+    }
+    else {
+        return NSDragOperationNone;
+    }
+}
+
+
+- (BOOL)outlineView:(NSOutlineView *)outlineView acceptDrop:(id < NSDraggingInfo >)info item:(id)targetItem childIndex:(NSInteger)index {
+    NSPasteboard *p = [info draggingPasteboard];
+    NSString *title = [p stringForType:@"public.text"];
+    NSTreeNode *sourceNode;
+    
+    for (NSTreeNode *b in [targetItem childNodes]) {
+        if ([[[b representedObject] title] isEqualToString:title]) {
+            sourceNode = b;
+        }
+    }
+    
+    if (!sourceNode) {
+        return NO;
+    }
+    
+    NSUInteger indexArr[] = {0,index};
+    NSIndexPath *toIndexPATH =[NSIndexPath indexPathWithIndexes:indexArr length:2];
+    
+    [_notebookTree moveNode:sourceNode toIndexPath:toIndexPATH];
+    
+    return YES;
+}
+
 
 @end

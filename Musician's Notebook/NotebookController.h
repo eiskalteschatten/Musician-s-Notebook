@@ -20,7 +20,7 @@
 @property (retain, nonatomic) NSMutableArray *contents;
 //@property (assign) NSMutableArray *contents;
 
-- (void)insertStandardItems;
+- (void)setupNotebooks;
 - (BOOL)isHeader:(id)item;
 - (void)selectParentFromSelection;
 

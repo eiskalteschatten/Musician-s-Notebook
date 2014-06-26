@@ -700,7 +700,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="225" height="340"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" autosaveName="notebooksview" rowHeight="20" rowSizeStyle="systemDefault" viewBased="YES" indentationPerLevel="14" autosaveExpandedItems="YES" outlineTableColumn="GtP-NK-Ffj" id="ItE-AN-ya5">
+                                                <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" autosaveName="notebooksview" rowHeight="20" rowSizeStyle="systemDefault" viewBased="YES" floatsGroupRows="NO" indentationPerLevel="14" autosaveExpandedItems="YES" outlineTableColumn="GtP-NK-Ffj" id="ItE-AN-ya5">
                                                     <rect key="frame" x="0.0" y="0.0" width="225" height="340"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <size key="intercellSpacing" width="3" height="0.0"/>

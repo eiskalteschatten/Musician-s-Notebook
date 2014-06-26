@@ -25,7 +25,7 @@
 }
 
 - (void)setAltImage {
-    //self.imageView = self.altImageView;
+    self.imageView = self.altImageView;
 }
 
 - (void)removeAltImage {
