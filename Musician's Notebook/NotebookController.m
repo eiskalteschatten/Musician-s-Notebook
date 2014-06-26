@@ -24,7 +24,6 @@
         _initialize = NO;
         [_notebooks setDataSource:_notebookDataSource];
         [self insertStandardItems];
-        [self fillNotebooks];
     }
 }
 
@@ -40,24 +39,25 @@
                                   }.mutableCopy;
     
     [_notebookTree addObject:root];
+    [_contents addObject:root];
     
-    [_notebooks expandItem:[_notebooks itemAtRow:0]];
-    [_notebooks selectRowIndexes:[NSIndexSet indexSetWithIndex:1] byExtendingSelection:NO];
-}
-
-- (void)fillNotebooks {
-    NSImageView *allSongsView = [[NSImageView alloc] init];
-    [allSongsView setImage: [NSImage imageNamed:@"Music Note"]];
     
-    NSMutableDictionary *root = @{@"title": @"NOTEBOOKS",
+    NSMutableDictionary *notebooks = @{@"title": @"NOTEBOOKS",
                                   @"isLeaf": @(NO),
                                   @"children":@[
                                           [Notebook notebookWithTitle:@"All Songs" andImage:allSongsView]
                                           ].mutableCopy
                                   }.mutableCopy;
     
-    NSIndexPath *indexPath = [NSIndexPath indexPathWithIndex:self.contents.count];
-    [_notebookTree insertObject:root atArrangedObjectIndexPath:indexPath];
+    NSInteger row = _contents.count + 1;
+    NSIndexPath *indexPath = [NSIndexPath indexPathWithIndex:row];
+    
+    [_notebookTree insertObject:notebooks atArrangedObjectIndexPath:indexPath];
+    [_contents addObject:notebooks];
+    
+    [_notebooks expandItem:[_notebooks itemAtRow:0]];
+    [_notebooks expandItem:[_notebooks itemAtRow:row+1]];
+    [_notebooks selectRowIndexes:[NSIndexSet indexSetWithIndex:1] byExtendingSelection:NO];
 }
 
 - (BOOL)isHeader:(id)item {
