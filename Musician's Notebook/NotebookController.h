@@ -17,7 +17,8 @@
 @property (assign) IBOutlet NotebookDataSource *notebookDataSource;
 
 @property (assign) BOOL initialize;
-@property (assign) NSMutableArray *contents;
+@property (retain, nonatomic) NSMutableArray *contents;
+//@property (assign) NSMutableArray *contents;
 
 - (void)insertStandardItems;
 - (BOOL)isHeader:(id)item;

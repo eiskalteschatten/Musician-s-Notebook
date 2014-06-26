@@ -27,14 +27,11 @@
     }
 }
 
-- (void)insertStandardItems {
-    NSImageView *allSongsView = [[NSImageView alloc] init];
-    [allSongsView setImage: [NSImage imageNamed:@"Music Note"]];
-    
+- (void)insertStandardItems {    
     NSMutableDictionary *root = @{@"title": @"LIBRARY",
                                   @"isLeaf": @(NO),
                                   @"children":@[
-                                          [Notebook notebookWithTitle:@"All Songs" andImage:allSongsView]
+                                          [Notebook notebookWithTitle:@"All Songs"]
                                           ].mutableCopy
                                   }.mutableCopy;
     
@@ -45,7 +42,7 @@
     NSMutableDictionary *notebooks = @{@"title": @"NOTEBOOKS",
                                   @"isLeaf": @(NO),
                                   @"children":@[
-                                          [Notebook notebookWithTitle:@"All Songs" andImage:allSongsView]
+                                          [Notebook notebookWithTitle:@"Untitled Notebook"]
                                           ].mutableCopy
                                   }.mutableCopy;
     
@@ -53,6 +50,8 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathWithIndex:row];
     
     [_notebookTree insertObject:notebooks atArrangedObjectIndexPath:indexPath];
+  
+    _contents = [[NSMutableArray alloc] init];
     [_contents addObject:notebooks];
     
     [_notebooks expandItem:[_notebooks itemAtRow:0]];
@@ -91,9 +90,7 @@
 #pragma mark Add and remove controls
 
 - (IBAction)addNotebook:(id)sender {
-    NSImageView *allSongsView = [[NSImageView alloc] init];
-    [allSongsView setImage: [NSImage imageNamed:@"Music Note"]];
-    Notebook *notebook = [Notebook notebookWithTitle:@"New Notebook" andImage:allSongsView];
+    Notebook *notebook = [Notebook notebookWithTitle:@"New Notebook"];
     
     NSIndexPath *indexPath = [_notebookTree selectionIndexPath];
     
@@ -133,7 +130,15 @@
 }
 
 - (void)outlineViewSelectionDidChange:(NSNotification *)notification {
+//    NSInteger selectedRow = [_notebooks selectedRow];
+//    id selectedItem = [_notebooks itemAtRow:selectedRow];
+    NSArray *nodes = [_notebookTree selectedNodes];
+    NSArray *objects = [_notebookTree selectedObjects];
+    NSArray *indexPaths = [_notebookTree selectionIndexPaths];
     
+    for (id node in nodes) {
+
+    }
 }
 
 @end

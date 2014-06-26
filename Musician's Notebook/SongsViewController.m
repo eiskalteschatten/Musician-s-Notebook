@@ -23,7 +23,6 @@
 }
 
 - (void)awakeFromNib {
-    [_splitView setHoldingPriority:NSLayoutPriorityDragThatCanResizeWindow forSubviewAtIndex:0];
     [[_tabsView textStorage] setFont:[NSFont fontWithName:@"Courier" size:13]];
 }
 

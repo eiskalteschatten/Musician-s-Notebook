@@ -10,16 +10,26 @@
 
 @implementation Notebook
 
-+ (Notebook *)notebookWithTitle:(NSString *)title andImage:(NSImageView *)imageView {
++ (Notebook *)notebookWithTitle:(NSString *)title {
     Notebook *result = [Notebook new];
     result.title = title;
-    result.imageView = nil;//imageView;
+    result.imageView = [NSImage imageNamed:@"Music Note"];
+    result.stdImageView = [NSImage imageNamed:@"Music Note"];
+    result.altImageView = [NSImage imageNamed:@"Music Note Alt"];
     
     return result;
 }
 
-- (BOOL)isLeaf{
+- (BOOL)isLeaf {
     return YES;
+}
+
+- (void)setAltImage {
+    //self.imageView = self.altImageView;
+}
+
+- (void)removeAltImage {
+    self.imageView = self.stdImageView;
 }
 
 @end

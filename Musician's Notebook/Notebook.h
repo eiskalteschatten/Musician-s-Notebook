@@ -11,10 +11,15 @@
 @interface Notebook : NSObject
 
 @property (copy) NSString *title;
-@property (copy) NSImageView *imageView;
+@property (copy) NSImage *imageView;
+@property (copy) NSImage *stdImageView;
+@property (copy) NSImage *altImageView;
 
-+ (Notebook*)notebookWithTitle:(NSString *)title andImage:(NSImageView *)imageView;
++ (Notebook*)notebookWithTitle:(NSString *)title;
 
 @property (readonly) BOOL isLeaf;
+
+- (void)setAltImage;
+- (void)removeAltImage;
 
 @end
