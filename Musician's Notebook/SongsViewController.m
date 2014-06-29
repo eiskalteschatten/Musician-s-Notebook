@@ -58,15 +58,6 @@
     
     if ([identifier isEqualToString:@"MainCell"]) {
         NSTableCellView *cellView = [tableView makeViewWithIdentifier:@"MainCell" owner:self];
-        
-        //[cellView.imageView setImage:[NSImage imageNamed:@"Music Note"]];
-        //[cellView.subviews[1] setStringValue:@"New Song"];
-        //[cellView.subviews[2] setStringValue:@"test"];
-
-        
-       //NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:currentNote];
-       //[tableView selectRowIndexes:indexSet byExtendingSelection:NO];
-        
         return cellView;
     }
     
@@ -74,23 +65,24 @@
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
-    NSImage *artwork = [_artworkView image];
-    NSString *artworkName = [artwork name];
-    if (artwork == nil ||  [artworkName  isEqual: @"Music Note"]) {
-       [_artworkView setImage:[NSImage imageNamed:@"Drag and Drop Artwork"]];
+    NSInteger selectedRows = [_songView numberOfSelectedRows];
+    
+    if (selectedRows > 0) {
+        [_tabControl setHidden:NO];
+        [_tabView setHidden:NO];
+        [_noSongSelected setHidden:YES];
+        
+        NSImage *artwork = [_artworkView image];
+        NSString *artworkName = [artwork name];
+        if (artwork == nil ||  [artworkName  isEqual: @"Music Note"]) {
+           [_artworkView setImage:[NSImage imageNamed:@"Drag and Drop Artwork"]];
+        }
     }
-    
-//    NSArray *tests = _songArray.arrangedObjects;
-//    NSLog( @"%@", _songArray);
-    
-//    _selectedNote = [pageList selectedRow];
-//    
-//    if (_selectedNote != -1) {
-//        [_textViewController loadNote:_selectedNote];
-//    }
-//    else {
-//        // No row was selected
-//    }
+    else {
+        [_tabControl setHidden:YES];
+        [_tabView setHidden:YES];
+        [_noSongSelected setHidden:NO];
+    }
 }
 
 - (void)tableView:(NSTableView *)tableView didAddRowView:(NSTableRowView *)rowView forRow:(NSInteger)row {

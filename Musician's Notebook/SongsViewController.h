@@ -17,6 +17,7 @@
 @property (assign) IBOutlet NSTabView *tabView;
 @property (assign) IBOutlet NSTableView *songView;
 @property (retain) IBOutlet SongArrayController *songArray;
+@property (retain) IBOutlet NSImageView *noSongSelected;
 
 @property (assign) IBOutlet NSTextField *songName;
 @property (assign) IBOutlet NSImageView *artworkView;
