@@ -12,8 +12,8 @@
 
 -(id)newObject {
     id newObj = [super newObject];
-    //[newObj setValue:@"test" forKey:@"name"];
-    
+//    [newObj setValue:[NSImage imageNamed:@"Music Note"] forKey:@"artwork"];
+
     return newObj;
 }
 

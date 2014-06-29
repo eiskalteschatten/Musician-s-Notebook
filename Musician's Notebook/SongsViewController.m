@@ -44,7 +44,7 @@
     [_songArray add:self];
     [self changeTab:0];
     [_window makeFirstResponder:_songName];
-    [_artworkView setImage:[NSImage imageNamed:@"Drag and Drop Artwork"]];
+//    [_artworkView setImage:[NSImage imageNamed:@"Drag and Drop Artwork"]];
 }
 
 #pragma mark -
@@ -75,7 +75,8 @@
 }
 
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
-    if ([_artworkView image] == nil) {
+    NSImage *artwork = [_artworkView image];
+    if (artwork == nil) {
        [_artworkView setImage:[NSImage imageNamed:@"Drag and Drop Artwork"]];
     }
     
@@ -90,6 +91,13 @@
 //    else {
 //        // No row was selected
 //    }
+}
+
+- (void)tableView:(NSTableView *)tableView didAddRowView:(NSTableRowView *)rowView forRow:(NSInteger)row {
+    NSImage *artwork = [_artworkView image];
+    if (artwork == nil) {
+        [_artworkView setImage:[NSImage imageNamed:@"Drag and Drop Artwork"]];
+    }
 }
 
 @end
