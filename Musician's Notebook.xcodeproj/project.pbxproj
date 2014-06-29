@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		930DB26C19603A0500C42185 /* TabsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930DB26B19603A0500C42185 /* TabsViewController.m */; };
 		9384EE8A191956610065B2EA /* SongArrayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9384EE89191956610065B2EA /* SongArrayController.m */; };
 		93ABC59519155E99004AF635 /* SongsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ABC59319155E99004AF635 /* SongsViewController.m */; };
 		93ABC59619155E99004AF635 /* SongsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93ABC59419155E99004AF635 /* SongsViewController.xib */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		930DB26A19603A0500C42185 /* TabsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabsViewController.h; sourceTree = "<group>"; };
+		930DB26B19603A0500C42185 /* TabsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabsViewController.m; sourceTree = "<group>"; };
 		9384EE88191956610065B2EA /* SongArrayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SongArrayController.h; sourceTree = "<group>"; };
 		9384EE89191956610065B2EA /* SongArrayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SongArrayController.m; sourceTree = "<group>"; };
 		93ABC59119155DF3004AF635 /* Musician's Notebook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Musician's Notebook.entitlements"; sourceTree = "<group>"; };
@@ -108,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		930DB269196039F000C42185 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				930DB26A19603A0500C42185 /* TabsViewController.h */,
+				930DB26B19603A0500C42185 /* TabsViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		93175E65191651BD00E50920 /* Main Window */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +142,7 @@
 				9384EE89191956610065B2EA /* SongArrayController.m */,
 				93EA93BB1944628000A61521 /* SongPaneView.h */,
 				93EA93BC1944628000A61521 /* SongPaneView.m */,
+				930DB269196039F000C42185 /* Views */,
 			);
 			name = SongsView;
 			sourceTree = "<group>";
@@ -343,6 +356,7 @@
 			files = (
 				9384EE8A191956610065B2EA /* SongArrayController.m in Sources */,
 				93FAA6BB190291E0009F7624 /* Musician_s_Notebook.xcdatamodeld in Sources */,
+				930DB26C19603A0500C42185 /* TabsViewController.m in Sources */,
 				93EA93DB1944F4C400A61521 /* NotebookController.m in Sources */,
 				93B98CA1195B54B8003EDD57 /* NotebookDataSource.m in Sources */,
 				93ABC59519155E99004AF635 /* SongsViewController.m in Sources */,

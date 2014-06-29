@@ -23,7 +23,7 @@
 }
 
 - (void)awakeFromNib {
-    [[_tabsView textStorage] setFont:[NSFont fontWithName:@"Courier" size:13]];
+    
 }
 
 - (IBAction)switchTab:(id)sender {
@@ -35,6 +35,19 @@
 - (void)changeTab:(NSInteger)tabIndex {
     [_tabView selectTabViewItemAtIndex:tabIndex];
     [_tabControl setSelectedSegment:tabIndex];
+    
+    if ([[[_tabView selectedTabViewItem] label]  isEqual: @"Lyrics"]) {
+        [_window makeFirstResponder:_lyricsView];
+    }
+    else if ([[[_tabView selectedTabViewItem] label]  isEqual: @"Tabs"]) {
+        [_window makeFirstResponder:_tabsView];
+    }
+    else if ([[[_tabView selectedTabViewItem] label]  isEqual: @"Notes"]) {
+        [_window makeFirstResponder:_notesView];
+    }
+    else if ([[[_tabView selectedTabViewItem] label]  isEqual: @"Song"]) {
+        [_window makeFirstResponder:_songName];
+    }
 }
 
 #pragma mark -

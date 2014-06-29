@@ -21,7 +21,9 @@
 
 @property (assign) IBOutlet NSTextField *songName;
 @property (assign) IBOutlet NSImageView *artworkView;
+@property (assign) IBOutlet NSTextView *lyricsView;
 @property (assign) IBOutlet NSTextView *tabsView;
+@property (assign) IBOutlet NSTextView *notesView;
 
 @property (assign) NSInteger clickedSegment;
 

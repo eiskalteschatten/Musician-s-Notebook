@@ -8,14 +8,16 @@
         <customObject id="-2" userLabel="File's Owner" customClass="SongsViewController">
             <connections>
                 <outlet property="artworkView" destination="xWg-d0-ug6" id="jOE-iP-KLY"/>
+                <outlet property="lyricsView" destination="08S-J6-tPn" id="zUv-La-txM"/>
                 <outlet property="noSongSelected" destination="UG1-45-TrT" id="b4e-1V-psv"/>
+                <outlet property="notesView" destination="SWx-tT-h3a" id="y6V-eo-u8C"/>
                 <outlet property="songArray" destination="4Sh-nk-aQG" id="jal-ko-1e2"/>
                 <outlet property="songName" destination="qRj-N7-LaC" id="e98-Yi-Wdv"/>
                 <outlet property="songView" destination="kuq-qn-dYO" id="g0y-if-6Wt"/>
                 <outlet property="splitView" destination="oN0-MT-z3l" id="ZFI-d3-Azd"/>
                 <outlet property="tabControl" destination="d4v-eC-bU3" id="SgA-kA-1ES"/>
                 <outlet property="tabView" destination="UNA-n0-3OT" id="m0a-KX-1jh"/>
-                <outlet property="tabsView" destination="jFj-0m-Ilp" id="lIo-fT-Ux4"/>
+                <outlet property="tabsView" destination="jFj-0m-Ilp" id="Oyk-dZ-4a7"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -573,7 +575,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="SnX-hi-nTu">
-                                                            <rect key="frame" x="455" y="0.0" width="16" height="597"/>
+                                                            <rect key="frame" x="343" y="0.0" width="16" height="296"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                     </scrollView>
@@ -701,6 +703,7 @@
                                                                     <size key="maxSize" width="463" height="10000000"/>
                                                                     <connections>
                                                                         <binding destination="4Sh-nk-aQG" name="attributedString" keyPath="selection.tabs" id="2Zb-6f-69D"/>
+                                                                        <outlet property="delegate" destination="3tT-Fu-o6B" id="Bqb-Ly-ZtN"/>
                                                                     </connections>
                                                                 </textView>
                                                             </subviews>
@@ -711,7 +714,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="RYs-zJ-Xq9">
-                                                            <rect key="frame" x="455" y="0.0" width="16" height="597"/>
+                                                            <rect key="frame" x="224" y="0.0" width="16" height="135"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                     </scrollView>
@@ -732,7 +735,7 @@
                                         </tabViewItem>
                                         <tabViewItem label="Notes" identifier="" id="u6O-Gl-HGL">
                                             <view key="view" id="XG5-dS-pTk">
-                                                <rect key="frame" x="0.0" y="0.0" width="492" height="597"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="471" height="597"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <scrollView misplaced="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC7-b2-0Zj">
@@ -763,7 +766,7 @@
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                         <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="CVl-WS-xrW">
-                                                            <rect key="frame" x="476" y="0.0" width="16" height="597"/>
+                                                            <rect key="frame" x="224" y="0.0" width="16" height="135"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </scroller>
                                                     </scrollView>
@@ -830,6 +833,11 @@
             </constraints>
         </customView>
         <customObject id="vXG-g7-BTo" customClass="AppDelegate"/>
+        <customObject id="3tT-Fu-o6B" customClass="TabsViewController">
+            <connections>
+                <outlet property="tabsView" destination="jFj-0m-Ilp" id="hST-tU-23F"/>
+            </connections>
+        </customObject>
         <arrayController mode="entity" entityName="Song" automaticallyPreparesContent="YES" id="4Sh-nk-aQG" userLabel="Songs" customClass="SongArrayController">
             <connections>
                 <binding destination="vXG-g7-BTo" name="managedObjectContext" keyPath="self.managedObjectContext" id="6pn-oj-sa9"/>
