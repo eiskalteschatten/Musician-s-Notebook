@@ -45,7 +45,7 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="60" viewBased="YES" id="kuq-qn-dYO">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="622"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="230" height="494"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <size key="intercellSpacing" width="3" height="2"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -203,7 +203,7 @@
                             <rect key="frame" x="315" y="0.0" width="492" height="647"/>
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
-                                <tabView misplaced="YES" drawsBackground="NO" type="noTabsNoBorder" initialItem="m42-Kz-uve" translatesAutoresizingMaskIntoConstraints="NO" id="UNA-n0-3OT">
+                                <tabView hidden="YES" misplaced="YES" drawsBackground="NO" type="noTabsNoBorder" initialItem="m42-Kz-uve" translatesAutoresizingMaskIntoConstraints="NO" id="UNA-n0-3OT">
                                     <rect key="frame" x="-1" y="0.0" width="471" height="597"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -778,7 +778,7 @@
                                         </tabViewItem>
                                     </tabViewItems>
                                 </tabView>
-                                <segmentedControl verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4v-eC-bU3">
+                                <segmentedControl hidden="YES" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4v-eC-bU3">
                                     <rect key="frame" x="74" y="616" width="346" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <segmentedCell key="cell" alignment="left" style="texturedRounded" trackingMode="selectOne" id="yCd-Jg-c7o">
@@ -796,7 +796,7 @@
                                         <action selector="switchTab:" target="-2" id="Uym-sm-0So"/>
                                     </connections>
                                 </segmentedControl>
-                                <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UG1-45-TrT">
+                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UG1-45-TrT">
                                     <rect key="frame" x="225" y="231" width="195" height="113"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyUpOrDown" image="No Song Selected" id="ydI-re-u5C"/>

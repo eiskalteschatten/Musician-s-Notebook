@@ -20,16 +20,16 @@
         <attribute name="composer" optional="YES" attributeType="String" spotlightIndexingEnabled="YES" syncable="YES"/>
         <attribute name="dateCreated" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="dateUpdated" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="disc_number_end" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="disc_number_start" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="disc_number_end" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="disc_number_start" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="genre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lyrics" optional="YES" attributeType="Transformable" spotlightIndexingEnabled="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" spotlightIndexingEnabled="YES" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="Transformable" spotlightIndexingEnabled="YES" syncable="YES"/>
         <attribute name="tabs" optional="YES" attributeType="Transformable" spotlightIndexingEnabled="YES" syncable="YES"/>
-        <attribute name="track_number_end" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="track_number_start" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" spotlightIndexingEnabled="YES" syncable="YES"/>
+        <attribute name="track_number_end" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="track_number_start" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="String" spotlightIndexingEnabled="YES" syncable="YES"/>
     </entity>
     <elements>
         <element name="Audio" positionX="-126" positionY="171" width="128" height="58"/>

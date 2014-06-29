@@ -22,6 +22,7 @@
 - (NSURL *)applicationFilesDirectory {
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSURL *appSupportURL = [[fileManager URLsForDirectory:NSApplicationSupportDirectory inDomains:NSUserDomainMask] lastObject];
+    //NSLog([appSupportURL path]);
     return [appSupportURL URLByAppendingPathComponent:@"Alex-Seifert.Musician_s_Notebook"];
 }
 
