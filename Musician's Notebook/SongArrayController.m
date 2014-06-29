@@ -12,7 +12,7 @@
 
 -(id)newObject {
     id newObj = [super newObject];
-//    [newObj setValue:[NSImage imageNamed:@"Music Note"] forKey:@"artwork"];
+    [newObj setValue:[NSImage imageNamed:@"Music Note"] forKey:@"artwork"];
 
     return newObj;
 }

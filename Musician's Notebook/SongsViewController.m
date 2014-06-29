@@ -44,7 +44,6 @@
     [_songArray add:self];
     [self changeTab:0];
     [_window makeFirstResponder:_songName];
-//    [_artworkView setImage:[NSImage imageNamed:@"Drag and Drop Artwork"]];
 }
 
 #pragma mark -
@@ -76,7 +75,8 @@
 
 - (void)tableViewSelectionDidChange:(NSNotification *)aNotification {
     NSImage *artwork = [_artworkView image];
-    if (artwork == nil) {
+    NSString *artworkName = [artwork name];
+    if (artwork == nil ||  [artworkName  isEqual: @"Music Note"]) {
        [_artworkView setImage:[NSImage imageNamed:@"Drag and Drop Artwork"]];
     }
     
@@ -95,9 +95,11 @@
 
 - (void)tableView:(NSTableView *)tableView didAddRowView:(NSTableRowView *)rowView forRow:(NSInteger)row {
     NSImage *artwork = [_artworkView image];
-    if (artwork == nil) {
+    if (artwork == nil || [[artwork name]  isEqual: @"Music Note"]) {
         [_artworkView setImage:[NSImage imageNamed:@"Drag and Drop Artwork"]];
     }
+    
+    
 }
 
 @end
