@@ -27,6 +27,8 @@
         <attribute name="name" optional="YES" attributeType="String" spotlightIndexingEnabled="YES" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="Transformable" spotlightIndexingEnabled="YES" syncable="YES"/>
         <attribute name="tabs" optional="YES" attributeType="Transformable" spotlightIndexingEnabled="YES" syncable="YES"/>
+        <attribute name="tempo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time_signature" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="track_number_end" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="track_number_start" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="year" optional="YES" attributeType="String" spotlightIndexingEnabled="YES" syncable="YES"/>
@@ -34,6 +36,6 @@
     <elements>
         <element name="Audio" positionX="-126" positionY="171" width="128" height="58"/>
         <element name="Notebooks" positionX="-200" positionY="50" width="128" height="133"/>
-        <element name="Song" positionX="-45" positionY="18" width="128" height="315"/>
+        <element name="Song" positionX="-45" positionY="18" width="128" height="345"/>
     </elements>
 </model>
