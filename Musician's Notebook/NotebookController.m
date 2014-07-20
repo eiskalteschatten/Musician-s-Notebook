@@ -131,25 +131,25 @@
 }
 
 - (void)outlineViewSelectionIsChanging:(NSNotification *)notification {
-    NSArray *objects = [_notebookTree selectedObjects];
-    
-    for (int i = 0; i < [objects count]; i++) {
-        id object = [objects objectAtIndex:i];
-        if ([object isKindOfClass:[Notebook class]]) {
-            [object removeAltImage];
-        }
-    }
+//    NSArray *objects = [_notebookTree selectedObjects];
+//    
+//    for (int i = 0; i < [objects count]; i++) {
+//        id object = [objects objectAtIndex:i];
+//        if ([object isKindOfClass:[Notebook class]]) {
+//            [object removeAltImage];
+//        }
+//    }
 }
 
 - (void)outlineViewSelectionDidChange:(NSNotification *)notification {
-    NSArray *objects = [_notebookTree selectedObjects];
-    
-    for (int i = 0; i < [objects count]; i++) {
-        id object = [objects objectAtIndex:i];
-        if ([object isKindOfClass:[Notebook class]]) {
-            [object setAltImage];
-        }
-    }
+//    NSArray *objects = [_notebookTree selectedObjects];
+//    
+//    for (int i = 0; i < [objects count]; i++) {
+//        id object = [objects objectAtIndex:i];
+//        if ([object isKindOfClass:[Notebook class]]) {
+//            [object setAltImage];
+//        }
+//    }
 }
 
 - (id <NSPasteboardWriting>)outlineView:(NSOutlineView *)outlineView pasteboardWriterForItem:(id)item {
