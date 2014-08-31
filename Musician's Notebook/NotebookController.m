@@ -150,6 +150,8 @@
 //            [object setAltImage];
 //        }
 //    }
+    
+    
 }
 
 - (id <NSPasteboardWriting>)outlineView:(NSOutlineView *)outlineView pasteboardWriterForItem:(id)item {
