@@ -24,6 +24,7 @@
 
 - (void)awakeFromNib {
     [self showSongsView];
+    _window.titleVisibility = NSWindowTitleHidden;
 }
 
 - (void)setMainViewTo:(NSViewController *)controller {

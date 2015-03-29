@@ -22,14 +22,14 @@
     return self;
 }
 
-- (void)windowDidBecomeKey:(NSNotification *)notification {
-    NSColor *bgColor = [_notebooksSourceList backgroundColor];
-    [_notebooksView setBackgroundColor:bgColor];
-}
-
-- (void)windowDidResignKey:(NSNotification *)notification {
-    NSColor *bgColor = [_notebooksSourceList backgroundColor];
-    [_notebooksView setBackgroundColor:bgColor];
-}
+//- (void)windowDidBecomeKey:(NSNotification *)notification {
+//    NSColor *bgColor = [_notebooksSourceList backgroundColor];
+//    [_notebooksView setBackgroundColor:bgColor];
+//}
+//
+//- (void)windowDidResignKey:(NSNotification *)notification {
+//    NSColor *bgColor = [_notebooksSourceList backgroundColor];
+//    [_notebooksView setBackgroundColor:bgColor];
+//}
 
 @end
