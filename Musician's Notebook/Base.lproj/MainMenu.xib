@@ -820,8 +820,8 @@
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="oc5-Ey-OA6"/>
                     <toolbarItem implicitItemIdentifier="2111DED9-2413-4004-9C85-AF1851ED0F23" label="Search" paletteLabel="Search" id="dqG-aS-kJa">
                         <nil key="toolTip"/>
-                        <size key="minSize" width="300" height="22"/>
-                        <size key="maxSize" width="200" height="22"/>
+                        <size key="minSize" width="350" height="22"/>
+                        <size key="maxSize" width="350" height="22"/>
                         <searchField key="view" wantsLayer="YES" verticalHuggingPriority="750" id="0QN-dG-SCB">
                             <rect key="frame" x="0.0" y="14" width="200" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -854,7 +854,6 @@
                     <toolbarItem reference="oc5-Ey-OA6"/>
                     <toolbarItem reference="dqG-aS-kJa"/>
                     <toolbarItem reference="oc5-Ey-OA6"/>
-                    <toolbarItem reference="sdB-2L-9SO"/>
                 </defaultToolbarItems>
             </toolbar>
             <connections>
