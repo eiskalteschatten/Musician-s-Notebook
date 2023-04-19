@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>05142B01-48EC-4929-8C74-686D75005902</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Musician's Notebook</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>444BF0C6-3FA0-4F71-9FEA-011EE0C973B2</key>
+		<string>https://bitbucket.org/eiskalteschatten/musicians-notebook.git</string>
+		<key>C9B2EF6AA91379B6E4AF6E9348AF1EC02A393AE1</key>
+		<string>https://bitbucket.org/eiskalteschatten/musicians-notebook.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Musician's Notebook.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>444BF0C6-3FA0-4F71-9FEA-011EE0C973B2</key>
+		<string>../../../Musician's Notebook</string>
+		<key>C9B2EF6AA91379B6E4AF6E9348AF1EC02A393AE1</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/eiskalteschatten/musicians-notebook.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C9B2EF6AA91379B6E4AF6E9348AF1EC02A393AE1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>444BF0C6-3FA0-4F71-9FEA-011EE0C973B2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Musician's Notebook</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C9B2EF6AA91379B6E4AF6E9348AF1EC02A393AE1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Musician's%20Notebook</string>
+		</dict>
+	</array>
+</dict>
+</plist>
